@@ -114,7 +114,7 @@
                 </div>
             </deckgo-slide-split>
 
-            <deckgo-slide-code src-file="./assets/code/deckdeckgo-slide-code-example.txt" style="--code-margin-bottom: 6rem; --background: var(--ion-color-dark); --color: var(--ion-color-tertiary); --code-color: var(--ion-color-light);">
+            <deckgo-slide-code src-file="./assets/code/deckdeckgo-slide-code-example.txt" style="--code-margin-bottom: 6rem; --background: var(--ion-color-dark); --color: var(--ion-color-light); --code-color: var(--ion-color-light);">
                 <h2 slot="title">Showcase you code</h2>
             </deckgo-slide-code>
 
@@ -135,12 +135,14 @@
                 </div>
             </deckgo-slide-title>
 
-            <deckgo-slide-title>
+            <deckgo-slide-title style="--background: var(--ion-color-dark); --color: var(--ion-color-light);">
                 <h2 slot="title">Get started now 🔥</h2>
-                <div slot="content" no-shadow>
-                    <p>
-                        <a href="https://github.com/fluster/deckdeckgo"><ion-icon style="font-size: 5rem;" name="logo-github"></ion-icon></a>
-                    </p>
+                <div slot="content">
+                    <div style="padding: 32px;">
+                        <code style="background-image: var(--ion-color-dark);" padding>
+                            $ npm init deckdeckgo
+                        </code>
+                    </div>
 
                     <p style="margin-bottom: 0; margin-top: 16px; font-size: 0.5em;">
                         Created by David Dal Busco
