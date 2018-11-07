@@ -1,6 +1,6 @@
-<a name="1.0.0-beta.3"></a>
-# [1.0.0-beta.3](https://github.com/fluster/deckdeckgo/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2018-08-20)
+<a name="1.0.0-beta.1"></a>
+# [1.0.0-beta.1](https://github.com/fluster/deckdeckgo/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2018-11-07)
 
-### Features
+### Fix
 
-* DeckDeckGo has now a sweet logo designed by Anita ([#1](https://github.com/fluster/deckdeckgo/issues/1))
+* slider was not swipeable on iOS (core)
