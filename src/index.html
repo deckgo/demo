@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+    <title>DeckDeckGo</title>
+
+    <meta property="og:site_name" content="DeckDeckGo">
+    <meta property="og:title" content="DeckDeckGo">
+
+    <meta name="author" content="David Dal Busco">
+
+    <meta name="description" content="DeckDeckGo is the new tool to create lightweight presentation using HTML and Ionic components. DeckDeckGo let you create without effort your slides and allows you to add some extra interactive features with the help of the Ionic Web Components. Moreover, DeckDeckGo bundles your presentation with services workers letting you publish it online with an offline support.">
+    <meta property="og:description" content="DeckDeckGo is the new tool to create lightweight presentation using HTML and Ionic components.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deckdeckgo.com">
+
+    <meta property="og:image" content="https://deckdeckgo.com/assets/img/deckdeckgo.png">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3880ff">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#3880ff">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                try {
+                    await navigator.serviceWorker.register('/service-worker.js');
+                } catch (e) {
+                    console.warn('No service worker registered');
+                }
+            });
+        }
+    </script>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <style>
+        /* Until Web Components are loaded, don't display content */
+        body {
+            background: #3880ff;
+        }
+
+        ion-app.loading, ion-app.loading a {
+            color: transparent;
+        }
+
+        ion-app.loading a {
+            color: transparent;
+        }
+    </style>
+
+</head>
+<body>
+
+<ion-app class="loading">
+    <ion-content>
+        <deckgo-deck id="slider" pager-percentage="false">
+
+            <!-- BEGIN: Your slides -->
+
+            <deckgo-slide-title>
+                <h1 slot="title">DeckDeckGo</h1>
+                <div no-shadow slot="content">
+                    <h3>Create a lightweight presentation using <strong>HTML</strong> and <strong>Web Components</strong> 🚀</h3>
+                </div>
+            </deckgo-slide-title>
+
+            <deckgo-slide-content style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                <h2 slot="title">Features</h2>
+                <ion-list slot="content" lines="none" padding-top>
+                    <ion-item style="--color: var(--ion-color-dark);">
+                        <ion-label text-wrap>✏️ Create <strong>without effort</strong> your presentation using HTML and CSS</ion-label>
+                    </ion-item>
+
+                    <ion-item style="--color: var(--ion-color-dark);">
+                        <ion-label text-wrap>📰️ Use predefined <strong>templates</strong></ion-label>
+                    </ion-item>
+
+                    <ion-item style="--color: var(--ion-color-dark);">
+                        <ion-label text-wrap>🌈 <strong>Style</strong> your presentation quickly</ion-label>
+                    </ion-item>
+
+                    <ion-item style="--color: var(--ion-color-dark);">
+                        <ion-label text-wrap>🌅 Create lightweight presentation where images are <strong>lazy</strong> loaded</ion-label>
+                    </ion-item>
+
+                    <ion-item style="--color: var(--ion-color-dark);">
+                        <ion-label text-wrap>📱 Design slides which looks good on <strong>mobile</strong> devices too</ion-label>
+                    </ion-item>
+
+                    <ion-item style="--color: var(--ion-color-dark);">
+                        <ion-label text-wrap>🎁 Free and <strong>open source</strong></ion-label>
+                    </ion-item>
+                </ion-list>
+            </deckgo-slide-content>
+
+            <deckgo-slide-split style="--slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-tertiary);">
+                <h3 slot="start">Publish your presentation as a <strong>Progressive Web App</strong> with <strong>offline</strong> support</h3>
+                <div slot="end" style="text-align: center; width: 100%;">
+                    <img data-src="./assets/img/deckdeckgo-homecoming.png" style="width: 20vw;"/>
+                </div>
+            </deckgo-slide-split>
+
+            <deckgo-slide-code src-file="./assets/code/deckdeckgo-slide-code-example.txt" style="--code-margin-bottom: 6rem; --background: var(--ion-color-dark); --color: var(--ion-color-tertiary); --code-color: var(--ion-color-light);">
+                <h2 slot="title">Showcase you code</h2>
+            </deckgo-slide-code>
+
+            <deckgo-slide-title reveal="true">
+                <h2 slot="title">Reveal</h2>
+                <p no-shadow slot="content">
+                    <span>A</span> <span>journey</span> <span>of a thousand miles</span> <span style="color: var(--ion-color-warning);"><strong>begins with a single step</strong> - </span> <span>Laozi</span>
+                </p>
+            </deckgo-slide-title>
+
+            <deckgo-slide-title>
+                <h2 slot="title">Cherry on the cake 🍒🍰</h2>
+                <div slot="content">
+                    <p>Add any <strong>Ionic</strong> components to your presentation</p>
+                    <div padding-top>
+                        <ion-button onclick="presentModal()" shape="round" size="large">Like this button</ion-button>
+                    </div>
+                </div>
+            </deckgo-slide-title>
+
+            <deckgo-slide-title>
+                <h2 slot="title">Get started now 🔥</h2>
+                <div slot="content" no-shadow>
+                    <p>
+                        <a href="https://github.com/fluster/deckdeckgo"><ion-icon style="font-size: 5rem;" name="logo-github"></ion-icon></a>
+                    </p>
+
+                    <p style="margin-bottom: 0; margin-top: 16px; font-size: 0.5em;">
+                        Created by David Dal Busco
+                    </p>
+                    <p no-margin no-padding style="font-size: 0.8em; margin-top: 8px;">
+                        <a href="https://twitter.com/daviddalbusco"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/david-dal-busco/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </p>
+                </div>
+            </deckgo-slide-title>
+
+            <!-- END: Your slides -->
+
+        </deckgo-deck>
+    </ion-content>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
+        <ion-fab-button>
+            <ion-icon name="apps"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="start">
+            <ion-fab-button color="primary" onclick="toggleFullScreen()"><ion-icon name="expand"></ion-icon></ion-fab-button>
+            <ion-fab-button color="primary" onclick="presentSlidePicker()"><ion-icon name="skip-forward"></ion-icon></ion-fab-button>
+            <ion-fab-button color="primary" onclick="nextSlide()"><ion-icon name="arrow-forward"></ion-icon></ion-fab-button>
+            <ion-fab-button color="primary" onclick="previousSlide()"><ion-icon name="arrow-back"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="top">
+            <ion-fab-button color="primary" onclick="presentAlert()"><ion-icon name="help"></ion-icon></ion-fab-button>
+            <ion-fab-button color="primary" onclick="doPrint()"><ion-icon name="print"></ion-icon></ion-fab-button>
+            <ion-fab-button color="primary" onclick="window.open('https://github.com/fluster/deckdeckgo', '_blank');"><ion-icon name="logo-github"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+
+    <!-- Ionic components anchors -->
+    <ion-popover-controller></ion-popover-controller>
+    <ion-modal-controller></ion-modal-controller>
+    <ion-alert-controller></ion-alert-controller>
+</ion-app>
+
+</body>
+</html>
