@@ -97,7 +97,7 @@ function initRoom() {
         element.style.marginTop = '32px';
 
         const small = document.createElement('small');
-        small.innerHTML = 'To find this presentation with the remote control 👉 ' + roomName;
+        small.innerHTML = 'Find this presentation with the remote control 👉 ' + roomName;
         element.append(small);
 
         firstSlideContent.lastChild.parentNode.insertBefore(element, firstSlideContent.lastChild.nextSibling);
