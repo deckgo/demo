@@ -4,6 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const {GenerateSW} = require('workbox-webpack-plugin');
 
+const webpack = require('webpack');
+
 const path = require('path');
 
 const config = {
@@ -51,6 +53,12 @@ module.exports = (env, argv) => {
     if (argv.mode === 'production') {
         plugins.push(new GenerateSW());
     }
+
+    plugins.push(
+        new webpack.DefinePlugin({
+            SIGNALING_SERVER: JSON.stringify('https://api.deckdeckgo.com')
+        })
+    );
 
     config.plugins = plugins;
 
