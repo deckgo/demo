@@ -128,7 +128,6 @@ export class DeckdeckgoSlideCode implements DeckdeckgoSlide {
         });
     }
 
-    // DeckDeckGo
     render() {
         return <div class="deckgo-slide">
             <slot name="title"></slot>
@@ -158,7 +157,7 @@ export class DeckdeckgoSlideCode implements DeckdeckgoSlide {
             line.split(' ').join('').indexOf(this.anchorZoom.split(' ').join('')) > -1;
     }
 
-    // DeckDeckGoZoom
+    // DeckDeckGo
     hostData() {
         return {
             class: {
