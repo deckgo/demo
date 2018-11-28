@@ -54,6 +54,11 @@ initRemote = async () => {
             await remoteSize();
         });
 
+        // In this specific website we want to offer many "rooms"
+        await initRoom();
+
+        deckgoRemoteElement.server = SIGNALING_SERVER;
+
         await remoteSize();
 
         await initDeckMove();
@@ -61,6 +66,45 @@ initRemote = async () => {
         resolve();
     });
 };
+
+function initRoom() {
+    return new Promise(async (resolve) => {
+        const deckgoRemoteElement = document.querySelector("deckgo-remote");
+
+        if (!deckgoRemoteElement || !document) {
+            resolve();
+            return;
+        }
+
+        const roomNumber = Math.floor(Math.random() * 999);
+        const roomName = 'DeckDeckGo.com #' + roomNumber + '';
+        deckgoRemoteElement.room = roomName;
+
+        const deck = document.getElementById('slider');
+        if (!deck) {
+            resolve();
+            return;
+        }
+
+        const firstSlideContent = deck.querySelector('[slot=\'content\']');
+
+        if (!firstSlideContent || !firstSlideContent.lastChild) {
+            resolve();
+            return;
+        }
+
+        const element = document.createElement('p');
+        element.style.marginTop = '32px';
+
+        const small = document.createElement('small');
+        small.innerHTML = 'To find this presentation with the remote control 👉 ' + roomName;
+        element.append(small);
+
+        firstSlideContent.lastChild.parentNode.insertBefore(element, firstSlideContent.lastChild.nextSibling);
+
+        resolve();
+    });
+}
 
 function initDeckMove() {
     return new Promise(async (resolve) => {
@@ -106,8 +150,6 @@ function remoteSize() {
 
         deckgoRemoteElement.width = window.innerWidth;
         deckgoRemoteElement.height = window.innerHeight;
-
-        deckgoRemoteElement.server = SIGNALING_SERVER;
 
         const deck = document.getElementById('slider');
 
