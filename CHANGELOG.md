@@ -1,3 +1,10 @@
+<a name="1.0.0-beta.4"></a>
+# [1.0.0-beta.4](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2018-11-28)
+
+### Features
+
+* introduces the DeckDeckGo remote control 🎉
+
 <a name="1.0.0-beta.3"></a>
 # [1.0.0-beta.3](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2018-11-14)
 
