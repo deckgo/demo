@@ -57,7 +57,7 @@ initRemote = async () => {
         // In this specific website we want to offer many "rooms"
         await initRoom();
 
-        deckgoRemoteElement.server = SIGNALING_SERVER;
+        deckgoRemoteElement.server = process.env.SIGNALING_SERVER;
 
         await remoteSize();
 

@@ -56,7 +56,9 @@ module.exports = (env, argv) => {
 
     plugins.push(
         new webpack.DefinePlugin({
-            SIGNALING_SERVER: JSON.stringify('https://api.deckdeckgo.com')
+            'process.env': {
+                SIGNALING_SERVER: JSON.stringify('https://api.deckdeckgo.com')
+            }
         })
     );
 
