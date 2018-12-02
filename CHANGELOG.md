@@ -1,3 +1,14 @@
+<a name="1.0.0-beta.5"></a>
+# [1.0.0-beta.5](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2018-12-02)
+
+### Templates
+
+* add a slide about the "Gif" template
+
+### Libs
+
+* update the DeckDeckGo Web Component
+
 <a name="1.0.0-beta.4"></a>
 # [1.0.0-beta.4](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2018-11-28)
 
