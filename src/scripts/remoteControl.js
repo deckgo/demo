@@ -5,19 +5,23 @@ remoteEvent = async (event) => {
             return;
         }
 
-        if (!document.getElementById('slider')) {
+        const slider = document.getElementById('slider');
+
+        if (!slider) {
             resolve();
             return;
         }
 
         const type = event.detail.type;
 
-        const slideAnimation = event.detail.slideAnimation;
-
         if (type === 'next_slide') {
-            await document.getElementById('slider').slideNext(slideAnimation, false);
+            const slideAnimation = event.detail.slideAnimation;
+            await slider.slideNext(slideAnimation, false);
         } else if (type === 'prev_slide') {
-            await document.getElementById('slider').slidePrev(slideAnimation, false);
+            const slideAnimation = event.detail.slideAnimation;
+            await slider.slidePrev(slideAnimation, false);
+        } else if (type === 'slide_action') {
+            await youtubePlayPause(event);
         }
 
         resolve();
@@ -34,6 +38,15 @@ reconnectRemoteControl = () => {
         }
 
         await deckgoRemoteElement.connect();
+
+        if (!document.getElementById('slider')) {
+            resolve();
+            return;
+        }
+
+        await document.getElementById('slider').slideTo(0, 300, false);
+
+        resolve();
     });
 };
 
@@ -51,15 +64,12 @@ initRemote = async () => {
         });
 
         window.addEventListener('resize', async () => {
-            await remoteSize();
+            await initRemoteSize();
         });
 
-        // In this specific website we want to offer many "rooms"
-        await initRoom();
+        await initDeck();
 
-        deckgoRemoteElement.server = process.env.SIGNALING_SERVER;
-
-        await remoteSize();
+        await initRemoteSize();
 
         await initDeckMove();
 
@@ -67,7 +77,24 @@ initRemote = async () => {
     });
 };
 
-function initRoom() {
+function initDeck() {
+    return new Promise(async (resolve) => {
+        const deck = document.getElementById('slider');
+
+        if (!deck) {
+            resolve();
+            return;
+        }
+
+        deck.addEventListener('slidesDidLoad', async (slides) => {
+            await initRemoteRoomServer(slides)
+        });
+
+        resolve();
+    });
+}
+
+function initRemoteRoomServer(slides) {
     return new Promise(async (resolve) => {
         const deckgoRemoteElement = document.querySelector("deckgo-remote");
 
@@ -76,6 +103,10 @@ function initRoom() {
             return;
         }
 
+        deckgoRemoteElement.slides = slides.detail;
+        deckgoRemoteElement.server = process.env.SIGNALING_SERVER;
+
+        // In this specific website we want to offer many "rooms"
         const roomNumber = Math.floor(Math.random() * 999);
         const roomName = 'DeckDeckGo.com #' + roomNumber + '';
         deckgoRemoteElement.room = roomName;
@@ -139,7 +170,7 @@ function initDeckMove() {
     });
 }
 
-function remoteSize() {
+function initRemoteSize() {
     return new Promise(async (resolve) => {
         const deckgoRemoteElement = document.querySelector("deckgo-remote");
 
@@ -158,7 +189,7 @@ function remoteSize() {
             return;
         }
 
-        deckgoRemoteElement.slides = deck.childElementCount;
+        deckgoRemoteElement.length = deck.childElementCount;
 
         resolve();
     });
@@ -225,6 +256,34 @@ function scrollRemote(event) {
         }
 
         await deckgoRemoteElement.moveDraw(event.detail, '0ms');
+
+        resolve();
+    });
+}
+
+function youtubePlayPause(event) {
+    return new Promise(async (resolve) => {
+        const deck = document.getElementById('slider');
+
+        if (!deck) {
+            resolve();
+            return;
+        }
+
+        const index = await deck.getActiveIndex();
+
+        const youtubeSlideElement = document.querySelector('.deckgo-slide-container:nth-child(' + (index + 1) + ')');
+
+        if (!youtubeSlideElement || youtubeSlideElement.tagName !== 'deckgo-slide-youtube'.toUpperCase()) {
+            resolve();
+            return;
+        }
+
+        if (event.detail.action === 'youtube_pause') {
+            await youtubeSlideElement.pause();
+        } else {
+            await youtubeSlideElement.play();
+        }
 
         resolve();
     });
