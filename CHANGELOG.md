@@ -1,3 +1,10 @@
+<a name="1.0.0-beta.6"></a>
+# [1.0.0-beta.6](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2018-12-06)
+
+### Features
+
+* sync with deckdeckgo-starter kit v1.0.0-beta.9 ([#507baf3](https://github.com/fluster/deckdeckgo-website/commit/507baf3b4c244b3cbf41f3ce229d04ddd2ef49bf))
+
 <a name="1.0.0-beta.5"></a>
 # [1.0.0-beta.5](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2018-12-02)
 
