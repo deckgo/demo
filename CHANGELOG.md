@@ -1,3 +1,14 @@
+<a name="1.0.0-beta.7"></a>
+# [1.0.0-beta.7](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2018-12-13)
+
+### Features
+
+* add Markdown to the features
+
+### Lib
+
+* sync all last dependencies
+
 <a name="1.0.0-beta.6"></a>
 # [1.0.0-beta.6](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2018-12-06)
 
