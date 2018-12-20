@@ -1,3 +1,10 @@
+<a name="1.0.0-beta.8"></a>
+# [1.0.0-beta.8](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2018-12-20)
+
+### Features
+
+* add a chart demo
+
 <a name="1.0.0-beta.7"></a>
 # [1.0.0-beta.7](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2018-12-13)
 
