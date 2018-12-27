@@ -1,3 +1,10 @@
+<a name="1.0.0-beta.9"></a>
+# [1.0.0-beta.9](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2018-12-27)
+
+### Features
+
+* add QR Code demo
+
 <a name="1.0.0-beta.8"></a>
 # [1.0.0-beta.8](https://github.com/fluster/deckdeckgo-website/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2018-12-20)
 
