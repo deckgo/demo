@@ -19,14 +19,14 @@ Cherry on the cake 🍒🎂 [DeckDeckGo] comes with its [Progressive Web App](ht
 
 ## Website
 
-This project is the website of [DeckDeckGo]. Visit the main project [repo](https://github.com/fluster/deckdeckgo) to learn more about how to create and edit your presentation using [DeckDeckGo].
+This project is the website of [DeckDeckGo]. Visit the main project [repo](https://github.com/deckgo/deckdeckgo) to learn more about how to create and edit your presentation using [DeckDeckGo].
 
 ## Getting Started
 
-This website was build using the [starter kit](https://github.com/fluster/deckdeckgo-starter) of [DeckDeckGo]. If you wish to clone it and run it locally, run the following commands: 
+This website was build using the [starter kit](https://github.com/deckgo/deckdeckgo-starter) of [DeckDeckGo]. If you wish to clone it and run it locally, run the following commands: 
 
 ```bash
-git clone https://github.com/fluster/deckdeckgo-website
+git clone https://github.com/deckgo/deckdeckgo-website
 cd deckdeckgo-website
 npm install
 npm run build
