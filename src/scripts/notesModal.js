@@ -1,5 +1,25 @@
 // Src: https://beta.ionicframework.com/docs/api/modal
-presentModal = async () => {
+displaySlideNotes = async () => {
+    const deck = document.getElementById('slider');
+
+    if (!deck) {
+        return;
+    }
+
+    const index = await deck.getActiveIndex();
+
+    const slide = document.querySelector('.deckgo-slide-container:nth-child(' + (index + 1) + ')');
+
+    if (!slide) {
+        return;
+    }
+
+    const title = slide.querySelector('[slot="title"]');
+    const notes = slide.querySelector('[slot="notes"][show]');
+
+    const titleText = title ? title.innerHTML : 'Slide ' + index;
+    const notesText = notes ? notes.innerHTML : 'No particular notes';
+
     // initialize controller
     const modalController = document.querySelector('ion-modal-controller');
     await modalController.componentOnReady();
@@ -10,32 +30,21 @@ presentModal = async () => {
   <ion-header>
     <ion-toolbar color="tertiary">
       <ion-buttons slot="start">
-          <ion-button id="close">
+          <ion-button>
               <ion-icon name="close"></ion-icon>
           </ion-button>
       </ion-buttons>
-      <ion-title>DeckDeckGo</ion-title>
+      <ion-title>${titleText}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content padding color="primary">
-    <div style="height: 100%; display: flex; flex-direction: column;" align-items-center justify-content-center>
-        <h3 text-center>...or this modal 😉</h3>
-        
-        <div text-center padding-top>
-            <ion-button id="dismiss" shape="round" size="large" color="primary">Dismiss</ion-button>
-        </div>
-    </div>
+    <p style="white-space: pre-wrap;">${notesText}</p>
   </ion-content>
   `;
 
     // listen for close event
-    const buttonDismiss = element.querySelector('ion-button#dismiss');
-    buttonDismiss.addEventListener('click', async () => {
-        await modalController.dismiss();
-    });
-
-    const buttonClose = element.querySelector('ion-button#close');
-    buttonClose.addEventListener('click', async () => {
+    const button = element.querySelector('ion-button');
+    button.addEventListener('click', async () => {
         await modalController.dismiss();
     });
 

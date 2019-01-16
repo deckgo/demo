@@ -14,6 +14,7 @@ import './scripts/loading.js';
 import './scripts/slider.js';
 import './scripts/sliderJumpTo.js';
 import './scripts/modal.js';
+import './scripts/notesModal.js';
 import './scripts/alert.js';
 import './scripts/remoteControl.js';
 

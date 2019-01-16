@@ -1,6 +1,9 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+
+const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
 
 const {GenerateSW} = require('workbox-webpack-plugin');
 
@@ -33,7 +36,7 @@ const plugins = [
         hash: true,
         inject: true,
         template: './src/index.html',
-        path: path.join(__dirname, "../dist/"),
+        path: path.join(__dirname, '../dist/'),
         filename: 'index.html'
     }),
     new CopyWebpackPlugin([
@@ -41,7 +44,8 @@ const plugins = [
         {from: 'src/manifest.json', to: ''},
         {from: 'src/robots.txt', to: ''},
         {from: 'node_modules/ionicons/dist/ionicons/svg/', to: 'svg'}
-    ])
+    ]),
+    new ProgressBarPlugin()
 ];
 
 module.exports = (env, argv) => {
@@ -52,6 +56,11 @@ module.exports = (env, argv) => {
 
     if (argv.mode === 'production') {
         plugins.push(new GenerateSW());
+        plugins.push(new DeckDeckGoInfoPlugin());
+
+        if (!argv.notes) {
+            plugins.push(new DeckDeckGoRemoveNotesPlugin());
+        }
     }
 
     plugins.push(
