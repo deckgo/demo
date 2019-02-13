@@ -1,3 +1,10 @@
+<a name="1.0.0-beta.12"></a>
+# [1.0.0-beta.12](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2019-02-13)
+
+### Features
+
+* update information following the release of the DeckDeckGo documentation
+
 <a name="1.0.0-beta.11"></a>
 # [1.0.0-beta.11](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2019-02-03)
 
