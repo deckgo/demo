@@ -14,9 +14,9 @@ import './scripts/loading.js';
 import './scripts/slider.js';
 import './scripts/sliderJumpTo.js';
 import './scripts/modal.js';
-import './scripts/alert.js';
 import './scripts/remoteControl.js';
 import './scripts/actions.js';
+import './scripts/menu.js';
 
 import { defineCustomElements as ionicElements } from '@ionic/core/loader';
 ionicElements(window);

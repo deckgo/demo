@@ -118,7 +118,7 @@
                 </ion-list>
             </deckgo-slide-content>
 
-            <deckgo-slide-split style="--slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-tertiary);">
+            <deckgo-slide-split style="color: var(--ion-color-tertiary); --slide-split-color-start: white; --slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-tertiary);">
                 <h1 slot="title">Progressive Web App</h1>
                 <h3 slot="start">Publish your presentation as a <strong>Progressive Web App</strong> with <strong>offline</strong> support</h3>
                 <div slot="end" style="text-align: center; width: 100%;">
@@ -211,6 +211,8 @@
 
             <!-- END: Your slides -->
 
+            <a href="#" onclick="openMenu(event)" slot="action" style="color: inherit;"><ion-icon name="more"></ion-icon></a>
+
         </deckgo-deck>
 
         <deckgo-remote></deckgo-remote>
@@ -228,11 +230,9 @@
             <ion-fab-button color="primary" onclick="previousSlide()"><ion-icon name="arrow-back"></ion-icon></ion-fab-button>
         </ion-fab-list>
         <ion-fab-list side="top">
-            <ion-fab-button color="primary" onclick="presentAlert()"><ion-icon name="help"></ion-icon></ion-fab-button>
             <ion-fab-button id="buttonSlideNotes" color="primary" onclick="displaySlideNotes()"><ion-icon name="clipboard"></ion-icon></ion-fab-button>
             <ion-fab-button class="hide-on-mobile" color="primary" onclick="doPrint()"><ion-icon name="print"></ion-icon></ion-fab-button>
             <ion-fab-button color="primary" onclick="reconnectRemoteControl()"><ion-icon name="link"></ion-icon></ion-fab-button>
-            <ion-fab-button color="primary" onclick="window.open('https://github.com/deckgo/deckdeckgo', '_blank');"><ion-icon name="logo-github"></ion-icon></ion-fab-button>
         </ion-fab-list>
     </ion-fab>
 
