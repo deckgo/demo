@@ -211,7 +211,7 @@
 
             <!-- END: Your slides -->
 
-            <a href="#" onclick="openMenu(event)" slot="action" style="color: inherit;"><ion-icon name="more"></ion-icon></a>
+            <a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;"><ion-icon name="more"></ion-icon></a>
 
         </deckgo-deck>
 
@@ -240,6 +240,14 @@
     <ion-popover-controller></ion-popover-controller>
     <ion-modal-controller></ion-modal-controller>
     <ion-alert-controller></ion-alert-controller>
+
+    <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">
+        <ion-icon name="logo-twitter" slot="twitter" style="color: #00aced; width: 1.4rem; height: 1.4rem;"></ion-icon>
+        <ion-icon name="logo-reddit" slot="reddit" style="width: 1.4rem; height: 1.4rem;"></ion-icon>
+        <ion-icon name="logo-linkedin" slot="linkedin" style="color: #0077b5; width: 1.4rem; height: 1.4rem;"></ion-icon>
+        <ion-icon name="mail" slot="email" style="color: #ff8ea3; width: 1.4rem; height: 1.4rem;"></ion-icon>
+        <ion-icon name="logo-whatsapp" slot="whatsapp" style="color: #25D366; width: 1.4rem; height: 1.4rem;"></ion-icon>
+    </web-social-share>
 </ion-app>
 
 <noscript>

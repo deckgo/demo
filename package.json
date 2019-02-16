@@ -42,7 +42,8 @@
     "deckdeckgo-highlight-code": "^1.0.0-alpha.11",
     "deckdeckgo-qrcode": "^1.0.0-alpha.4",
     "deckdeckgo-remote": "^1.0.0-alpha.5",
-    "ionicons": "^4.5.1"
+    "ionicons": "^4.5.1",
+    "web-social-share": "file:../../opensource/web-social-share"
   },
   "keywords": [
     "ionic",
