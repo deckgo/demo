@@ -1,3 +1,12 @@
+<a name="1.0.0-beta.13"></a>
+# [1.0.0-beta.13](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2019-02-17)
+
+### Features
+
+* add social share and popover menu
+* add iOS splashscreens ([#3](https://github.com/deckgo/deckdeckgo-website/pull/3))
+* update status bar color ([#2](https://github.com/deckgo/deckdeckgo-website/pull/2))
+
 <a name="1.0.0-beta.12"></a>
 # [1.0.0-beta.12](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2019-02-13)
 
