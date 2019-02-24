@@ -17,6 +17,7 @@ buildMenuListActions = () => {
 
         result += '<ion-item ion-item button onclick="howItWorks()" color="primary" style="--border-style: none;"><ion-icon name="help" slot="end"></ion-icon><ion-label>How it works</ion-label></ion-item>';
         result += '<ion-item ion-item button onclick="openLink(\'https://docs.deckdeckgo.com\')" color="primary" style="--border-style: none;"><ion-icon name="rocket" slot="end"></ion-icon><ion-label>Documentation</ion-label></ion-item>';
+        result += '<ion-item ion-item button onclick="openLink(\'https://twitter.com/deckdeckgo\')" color="primary" style="--border-style: none;"><ion-icon name="logo-twitter" slot="end"></ion-icon><ion-label>Twitter</ion-label></ion-item>';
         result += '<ion-item ion-item button onclick="openLink(\'https://github.com/deckgo\')" color="primary" style="--border-style: none;"><ion-icon name="logo-github" slot="end"></ion-icon><ion-label>Github</ion-label></ion-item>';
         result += '<ion-item ion-item button onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
 
