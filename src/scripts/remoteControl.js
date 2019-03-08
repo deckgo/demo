@@ -122,21 +122,30 @@ function initRemoteRoomServer(slides) {
             return;
         }
 
-        const firstSlideContent = deck.querySelector('[slot=\'content\']');
+        const slideYoutube = deck.querySelector('deckgo-slide-youtube');
 
-        if (!firstSlideContent || !firstSlideContent.lastChild) {
+        if (!slideYoutube) {
             resolve();
             return;
         }
 
-        const element = document.createElement('p');
-        element.style.marginTop = '32px';
+        const slotTitle = slideYoutube.querySelector('[slot=\'title\']');
+
+        if (!slotTitle) {
+            resolve();
+            return;
+        }
+
+        const element = document.createElement('h3');
+        element.style.margin = '0 0 16px 0px';
+        element.style.color = 'initial';
+        element.setAttribute('slot', 'content');
 
         const small = document.createElement('small');
         small.innerHTML = 'Find this presentation with the remote control 👉 ' + roomName;
         element.append(small);
 
-        firstSlideContent.lastChild.parentNode.insertBefore(element, firstSlideContent.lastChild.nextSibling);
+        slotTitle.parentNode.insertBefore(element, slotTitle.nextSibling);
 
         resolve();
     });
