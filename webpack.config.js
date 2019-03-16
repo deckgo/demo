@@ -31,7 +31,9 @@ const config = {
 };
 
 const plugins = [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+        cleanStaleWebpackAssets: false
+    }),
     new HtmlWebpackPlugin({
         hash: true,
         inject: true,
