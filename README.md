@@ -38,7 +38,7 @@ npm run dev
 
 ## License
 
-MIT © [David Dal Busco](mailto:david.dalbusco@outlook.com) and [Nicolas Mattia](nicolas@nmattia.com)
+MIT © [David Dal Busco](mailto:david.dalbusco@outlook.com) and [Nicolas Mattia](mailto:nicolas@nmattia.com)
 
 The icons (`desktop-light.svg`, `mobile-light.svg`, `projector.svg` and `tablet-light.svg`) licences' are registered to David Dal Busco, Zürich, Switzerland.
 
