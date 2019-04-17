@@ -116,7 +116,7 @@ function initRemoteRoomServer(slides) {
 
         // In this specific website we want to offer many "rooms"
         const roomNumber = Math.floor(Math.random() * 999);
-        const roomName = 'DeckDeckGo.com #' + roomNumber + '';
+        const roomName = 'DeckDeckGo #' + roomNumber + '';
         deckgoRemoteElement.room = roomName;
 
         const deck = document.getElementById('slider');
