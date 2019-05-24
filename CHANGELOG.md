@@ -1,3 +1,10 @@
+<a name="1.0.0-beta.14"></a>
+# [1.0.0-beta.14](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2019-05-24)
+
+### Libs
+
+* update libs including the org scoped DeckDeckGo libs
+
 <a name="1.0.0-beta.13"></a>
 # [1.0.0-beta.13](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2019-02-17)
 
