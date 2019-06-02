@@ -58,6 +58,21 @@ reconnectRemoteControl = () => {
     });
 };
 
+disconnectRemoteControl = () => {
+    return new Promise(async (resolve) => {
+        const deckgoRemoteElement = document.querySelector("deckgo-remote");
+
+        if (!deckgoRemoteElement) {
+            resolve();
+            return;
+        }
+
+        await deckgoRemoteElement.disconnect();
+
+        resolve();
+    });
+};
+
 initRemote = async () => {
     return new Promise(async (resolve) => {
         const deckgoRemoteElement = document.querySelector("deckgo-remote");
@@ -112,43 +127,39 @@ function initRemoteRoomServer(slides) {
         }
 
         deckgoRemoteElement.slides = slides.detail;
+
+        if (!deckgoRemoteElement.room) {
+            // In case the presentation is published and many users are browsing it, this enhance the change to have single id
+            // Or hash or timestamp would be better, but for the time being, a random number is readable and probably enough
+            const roomNumber = Math.floor(Math.random() * 999);
+            const roomName = ROOM_NAME ? `${ROOM_NAME} *${roomNumber}` : `DeckDeckGo *${roomNumber}`;
+            deckgoRemoteElement.room = roomName;
+
+            const deck = document.getElementById('slider');
+            if (deck) {
+                const slideYoutube = deck.querySelector('deckgo-slide-youtube');
+
+                if (slideYoutube) {
+                    const slotTitle = slideYoutube.querySelector('[slot=\'title\']');
+
+                    if (slotTitle) {
+                        const element = document.createElement('h3');
+                        element.style.margin = '0 0 16px 0px';
+                        element.style.color = 'initial';
+                        element.setAttribute('slot', 'content');
+
+                        const small = document.createElement('small');
+                        small.innerHTML = 'Find this presentation with the remote control 👉 ' + roomName;
+                        element.append(small);
+
+                        slotTitle.parentNode.insertBefore(element, slotTitle.nextSibling);
+                    }
+                }
+            }
+        }
+
+        // SIGNALING_SERVER is declared by Webpack, see webpack.config.js
         deckgoRemoteElement.server = process.env.SIGNALING_SERVER;
-
-        // In this specific website we want to offer many "rooms"
-        const roomNumber = Math.floor(Math.random() * 999);
-        const roomName = 'DeckDeckGo #' + roomNumber + '';
-        deckgoRemoteElement.room = roomName;
-
-        const deck = document.getElementById('slider');
-        if (!deck) {
-            resolve();
-            return;
-        }
-
-        const slideYoutube = deck.querySelector('deckgo-slide-youtube');
-
-        if (!slideYoutube) {
-            resolve();
-            return;
-        }
-
-        const slotTitle = slideYoutube.querySelector('[slot=\'title\']');
-
-        if (!slotTitle) {
-            resolve();
-            return;
-        }
-
-        const element = document.createElement('h3');
-        element.style.margin = '0 0 16px 0px';
-        element.style.color = 'initial';
-        element.setAttribute('slot', 'content');
-
-        const small = document.createElement('small');
-        small.innerHTML = 'Find this presentation with the remote control 👉 ' + roomName;
-        element.append(small);
-
-        slotTitle.parentNode.insertBefore(element, slotTitle.nextSibling);
 
         resolve();
     });
