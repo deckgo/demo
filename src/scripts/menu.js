@@ -76,44 +76,67 @@ presentHowItWorks = async () => {
 };
 
 openShare = async () => {
-    const webSocialShare = document.querySelector('web-social-share');
-
-    if (!webSocialShare || !window) {
-        return;
+    if (navigator && navigator.share) {
+        await shareMobile();
+    } else {
+        await shareDesktop();
     }
-
-    const share = {
-        displayNames: true,
-        config: [{
-            twitter: {
-                socialShareUrl: window.location.href,
-                socialSharePopupWidth: 300,
-                socialSharePopupHeight: 400
-            }
-        },{
-            reddit: {
-                socialShareUrl: window.location.href,
-                socialSharePopupWidth: 300,
-                socialSharePopupHeight: 500
-            }
-        },{
-            linkedin: {
-                socialShareUrl: window.location.href
-            }
-        },,{
-            email: {
-                socialShareBody: window.location.href
-            }
-        }, {
-            whatsapp: {
-                socialShareUrl: window.location.href
-            }
-        }]
-    };
-
-    webSocialShare.share = share;
-
-    webSocialShare.show = true;
 
     await document.querySelector('ion-popover-controller').dismiss();
 };
+
+function shareMobile() {
+    return new Promise(async (resolve) => {
+        await navigator.share({
+            title: document.title,
+            url: window.location.href,
+        });
+
+        resolve();
+    });
+}
+
+function shareDesktop() {
+    return new Promise(async (resolve) => {
+        const webSocialShare = document.querySelector('web-social-share');
+
+        if (!webSocialShare || !window) {
+            return;
+        }
+
+        const share = {
+            displayNames: true,
+            config: [{
+                twitter: {
+                    socialShareUrl: window.location.href,
+                    socialSharePopupWidth: 300,
+                    socialSharePopupHeight: 400
+                }
+            },{
+                reddit: {
+                    socialShareUrl: window.location.href,
+                    socialSharePopupWidth: 300,
+                    socialSharePopupHeight: 500
+                }
+            },{
+                linkedin: {
+                    socialShareUrl: window.location.href
+                }
+            },,{
+                email: {
+                    socialShareBody: window.location.href
+                }
+            }, {
+                whatsapp: {
+                    socialShareUrl: window.location.href
+                }
+            }]
+        };
+
+        webSocialShare.share = share;
+
+        webSocialShare.show = true;
+
+        resolve();
+    });
+}
