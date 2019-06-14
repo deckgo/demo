@@ -1,0 +1,5 @@
+@media(max-width: 576px) {
+    #mc-embedded-subscribe-form ion-button {
+        font-size: 0.8rem;
+    }
+}
