@@ -22,9 +22,12 @@ h3 {
     font-size: 1.4em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    max-width: 100%
+}
+
 deckgo-deck {
-    --code-font-size: 10px;
-    --code-font-family: Menlo, monospace;
+    --deckgo-highlight-code-font-family: Menlo, monospace;
 }
 
 ion-label, ion-label[text-wrap].sc-ion-label-md-h, p {
@@ -39,8 +42,15 @@ ion-label, ion-label[text-wrap].sc-ion-label-md-h, p {
     ion-label, ion-label[text-wrap].sc-ion-label-md-h, p {
         font-size: 32px;
     }
+}
 
-    deckgo-deck {
-        --code-font-size: 24px;
+@media(max-width: 768px) {
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
     }
 }
