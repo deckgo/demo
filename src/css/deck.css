@@ -1,9 +1,29 @@
-deckgo-deck {
-    --pager-background: var(--ion-color-tertiary-tint);
-    --pager-color: var(--ion-color-primary-shade);
-    --pager-text-color: var(--ion-color-primary-shade);
+deckgo-deck h1, deckgo-deck h2, deckgo-deck h3, deckgo-deck section, deckgo-deck deckgo-highlight-code {
+    width: 100%;
 
-    --pager-margin-bottom: 18px;
+    padding: 8px;
+}
 
-    --pager-size: 40px;
+deckgo-deck > * div[slot="background"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+deckgo-deck :not([slot="background"]) > deckgo-lazy-img {
+    --deckgo-lazy-img-padding: 16px;
+}
+
+deckgo-deck [slot="background"] > deckgo-lazy-img {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --deckgo-lazy-img-min-width: 100%;
 }

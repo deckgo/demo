@@ -149,6 +149,7 @@ function initRemoteRoomServer(slides) {
                         element.setAttribute('slot', 'content');
 
                         const small = document.createElement('small');
+                        small.style.fontSize = '65%';
                         small.innerHTML = 'Find this presentation with the remote control 👉 ' + roomName;
                         element.append(small);
 
