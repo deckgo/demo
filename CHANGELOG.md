@@ -1,5 +1,5 @@
 <a name="1.0.0-beta.15"></a>
-# [1.0.0-beta.15](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2019-05-24)
+# [1.0.0-beta.15](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2019-06-24)
 
 ### Features
 
