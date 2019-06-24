@@ -1,3 +1,20 @@
+<a name="1.0.0-beta.15"></a>
+# [1.0.0-beta.15](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2019-05-24)
+
+### Features
+
+* animated charts
+* better title handling for slides navigation display
+* share without parameters
+* hide actions in fullscreen in case of inactivity
+* remote control modal and QR core to open the remote control
+
+### Fix
+
+* spacing
+* signup form button size on small devices
+* `code` slide scrolling
+
 <a name="1.0.0-beta.14"></a>
 # [1.0.0-beta.14](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2019-05-24)
 
