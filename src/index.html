@@ -171,8 +171,10 @@
                 <h2 slot="footer" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">...for GIFs</h2>
             </deckgo-slide-gif>
 
-            <deckgo-slide-chart type="line" grid="true" date-pattern="dd.MM.yyyy" src="./assets/csv/data-chart.csv" ticks="5" style="--background: white;--color: black;">
-                <h2 slot="title">Or the template for charts</h2>
+            <deckgo-slide-chart type="line" grid="true" date-pattern="dd.MM.yyyy" animation="true"
+                                src="https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-multiple.csv"
+                                ticks="5" style="--background: white;--color: black;">
+                <h3 slot="title">Or the template for charts</h3>
             </deckgo-slide-chart>
 
             <deckgo-slide-code src="./assets/code/deckdeckgo-slide-code-example.txt" style="--code-margin-bottom: 6rem; --background: var(--ion-color-dark); --color: var(--ion-color-light); --code-color: var(--ion-color-light);">
