@@ -15,7 +15,7 @@ buildMenuListActions = () => {
     return new Promise(async (resolve) => {
         let result = '';
 
-        result += '<ion-item ion-item button onclick="howItWorks()" color="primary" style="--border-style: none;"><ion-icon name="help" slot="end"></ion-icon><ion-label>How it works</ion-label></ion-item>';
+        result += '<ion-item ion-item button onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" ariaLabel="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
         result += '<ion-item ion-item button onclick="openLink(\'https://docs.deckdeckgo.com\')" color="primary" style="--border-style: none;"><ion-icon name="rocket" slot="end"></ion-icon><ion-label>Documentation</ion-label></ion-item>';
         result += '<ion-item ion-item button onclick="openLink(\'https://twitter.com/deckdeckgo\')" color="primary" style="--border-style: none;"><ion-icon name="logo-twitter" slot="end"></ion-icon><ion-label>Twitter</ion-label></ion-item>';
         result += '<ion-item ion-item button onclick="openLink(\'https://github.com/deckgo/deckdeckgo\')" color="primary" style="--border-style: none;"><ion-icon name="logo-github" slot="end"></ion-icon><ion-label>Github</ion-label></ion-item>';
@@ -50,29 +50,6 @@ openMenu = async (ev) => {
     });
 
     await popover.present();
-};
-
-howItWorks = async () => {
-    await presentHowItWorks();
-    await document.querySelector('ion-popover-controller').dismiss();
-};
-
-presentHowItWorks = async () => {
-    const alertController = document.querySelector('ion-alert-controller');
-
-    if (!alertController) {
-        return;
-    }
-
-    await alertController.componentOnReady();
-
-    const alert = await alertController.create({
-        header: 'Hey!',
-        message: 'To navigate, just swipe the slides, use the left and right arrows keys of your keyboard or use the actions available at the bottom right',
-        buttons: ['OK']
-    });
-
-    await alert.present();
 };
 
 openShare = async () => {
