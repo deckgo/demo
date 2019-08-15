@@ -1,3 +1,25 @@
+<a name="1.0.0-beta.16"></a>
+# [1.0.0-beta.16](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2019-08-15)
+
+### Breaking Changes
+
+* reveal component are not displayed one after the other using a dedicated `<deckgo-reveal/>` component
+
+### Features
+
+* remove fab-list
+* update chapter icon
+* animated charts
+
+### Style
+
+* remove item popover button arrow on ios
+* follow starter kit
+
+### Fix
+
+* signup form button size on small devices
+
 <a name="1.0.0-beta.15"></a>
 # [1.0.0-beta.15](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2019-06-24)
 
