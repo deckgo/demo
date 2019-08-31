@@ -1,3 +1,18 @@
+<a name="1.0.0-rc.1"></a>
+# [1.0.0-rc.1](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.16...v1.0.0-rc.1) (2019-08-31)
+
+### Fix
+
+* overscroll auto best suited for windows and linux
+
+### Libs
+
+* update to most recent dependencies
+
+### Note about v1.0.0-rc.1
+
+The first users began to test, and to create content in, our web open source editor for presentations (`studio`)
+
 <a name="1.0.0-beta.16"></a>
 # [1.0.0-beta.16](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2019-08-15)
 
