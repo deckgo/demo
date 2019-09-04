@@ -3,7 +3,8 @@
 
 ### Features
 
-* better slide content centering on mobile devices 
+* better slide content centering on mobile devices
+* sync with studio for the image selector through attribute 
 
 <a name="1.0.0-rc.1"></a>
 # [1.0.0-rc.1](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-beta.16...v1.0.0-rc.1) (2019-08-31)
