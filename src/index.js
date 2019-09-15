@@ -14,6 +14,7 @@ import './css/signup.css';
 import '@webcomponents/custom-elements';
 
 import * as manifestData from './manifest.json';
+
 window.ROOM_NAME = manifestData.name;
 
 import './scripts/loading.js';
@@ -27,33 +28,36 @@ import './scripts/menu.js';
 import './scripts/history.js';
 import './scripts/fullscreen.js';
 import './scripts/resize.js';
+import './scripts/actionPlayPause.js';
 
-import { defineCustomElements as ionicElements } from '@ionic/core/loader';
+import {defineCustomElements as ionicElements} from '@ionic/core/loader';
+
 ionicElements(window);
 
-import { defineCustomElements as ioniconsElements } from 'ionicons/dist/loader';
+import {defineCustomElements as ioniconsElements} from 'ionicons/dist/loader';
+
 ioniconsElements(window);
 
 // Init DeckDeckGo elements
-import { defineCustomElements as deckDeckGoElements } from '@deckdeckgo/core/dist/loader';
+import {defineCustomElements as deckDeckGoElements} from '@deckdeckgo/core/dist/loader';
 
-import {defineCustomElements as deckDeckGoSlideTitleElements } from '@deckdeckgo/slide-title/dist/loader';
-import {defineCustomElements as deckDeckGoSlideContentElements } from '@deckdeckgo/slide-content/dist/loader';
-import {defineCustomElements as deckDeckGoSlideAuthorElements } from '@deckdeckgo/slide-author/dist/loader';
-import {defineCustomElements as deckDeckGoSlideChartElements } from '@deckdeckgo/slide-chart/dist/loader';
-import {defineCustomElements as deckDeckGoSlideYoutubeElements } from '@deckdeckgo/slide-youtube/dist/loader';
-import {defineCustomElements as deckDeckGoSlideSplitElements } from '@deckdeckgo/slide-split/dist/loader';
-import {defineCustomElements as deckDeckGoSlideCodeElements } from '@deckdeckgo/slide-code/dist/loader';
-import {defineCustomElements as deckDeckGoSlideGifElements } from '@deckdeckgo/slide-gif/dist/loader';
-import {defineCustomElements as deckDeckGoSlideQRCodeElements } from '@deckdeckgo/slide-qrcode/dist/loader';
+import {defineCustomElements as deckDeckGoSlideTitleElements} from '@deckdeckgo/slide-title/dist/loader';
+import {defineCustomElements as deckDeckGoSlideContentElements} from '@deckdeckgo/slide-content/dist/loader';
+import {defineCustomElements as deckDeckGoSlideAuthorElements} from '@deckdeckgo/slide-author/dist/loader';
+import {defineCustomElements as deckDeckGoSlideChartElements} from '@deckdeckgo/slide-chart/dist/loader';
+import {defineCustomElements as deckDeckGoSlideYoutubeElements} from '@deckdeckgo/slide-youtube/dist/loader';
+import {defineCustomElements as deckDeckGoSlideSplitElements} from '@deckdeckgo/slide-split/dist/loader';
+import {defineCustomElements as deckDeckGoSlideCodeElements} from '@deckdeckgo/slide-code/dist/loader';
+import {defineCustomElements as deckDeckGoSlideGifElements} from '@deckdeckgo/slide-gif/dist/loader';
+import {defineCustomElements as deckDeckGoSlideQRCodeElements} from '@deckdeckgo/slide-qrcode/dist/loader';
 
-import { defineCustomElements as deckDeckGoRemoteElements } from '@deckdeckgo/remote/dist/loader';
-import { defineCustomElements as deckDeckGoChartsElements } from '@deckdeckgo/charts/dist/loader';
-import { defineCustomElements as deckDeckGoQRCodeElements } from '@deckdeckgo/qrcode/dist/loader';
-import { defineCustomElements as deckDeckGoHighlightCodeElements } from '@deckdeckgo/highlight-code/dist/loader';
+import {defineCustomElements as deckDeckGoRemoteElements} from '@deckdeckgo/remote/dist/loader';
+import {defineCustomElements as deckDeckGoChartsElements} from '@deckdeckgo/charts/dist/loader';
+import {defineCustomElements as deckDeckGoQRCodeElements} from '@deckdeckgo/qrcode/dist/loader';
+import {defineCustomElements as deckDeckGoHighlightCodeElements} from '@deckdeckgo/highlight-code/dist/loader';
 
 // Init web-social-share
-import { defineCustomElements as webSocialShareElements } from 'web-social-share/dist/loader';
+import {defineCustomElements as webSocialShareElements} from 'web-social-share/dist/loader';
 
 deckDeckGoElements(window).then(async () => {
     await deckDeckGoChartsElements(window);

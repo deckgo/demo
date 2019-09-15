@@ -234,6 +234,9 @@
     </ion-content>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
+        <ion-fab-button id="play" color="primary" size="small" onclick="playPause('play', true)" style="display: none;"><ion-icon name="play" ariaLabel="Play video" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
+        <ion-fab-button id="pause" color="primary" size="small" onclick="playPause('pause', true)" style="display: none;"><ion-icon name="pause" ariaLabel="Pause video" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
+
         <ion-fab-button color="primary" size="small" onclick="previousSlide()"><ion-icon name="arrow-back" ariaLabel="Previous slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
         <ion-fab-button color="primary" size="small" onclick="nextSlide()"><ion-icon name="arrow-forward" ariaLabel="Next slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
         <ion-fab-button color="primary" size="small" onclick="presentSlidePicker()"><ion-icon name="list" md="md-list" ios="md-list" ariaLabel="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
