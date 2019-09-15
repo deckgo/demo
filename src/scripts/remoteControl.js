@@ -18,10 +18,12 @@ remoteEvent = async (event) => {
             const slideAnimation = event.detail.slideAnimation;
             await slider.slideNext(slideAnimation, slideAnimation);
             await pushStateSlideIndex(slider);
+            await initActionPlayPause(slider);
         } else if (type === 'prev_slide') {
             const slideAnimation = event.detail.slideAnimation;
             await slider.slidePrev(slideAnimation, slideAnimation);
             await pushStateSlideIndex(slider);
+            await initActionPlayPause(slider);
         } else if (type === 'slide_action') {
             await slidePlayPause(event);
         } else if (type === 'slide_to') {
@@ -29,6 +31,7 @@ remoteEvent = async (event) => {
             if (index >= 0) {
                 await slider.slideTo(index, 0);
                 await pushStateSlideIndex(slider);
+                await initActionPlayPause(slider);
             }
         }
 
@@ -291,31 +294,24 @@ function scrollRemote(event) {
 }
 
 function slidePlayPause(event) {
+    return playPause(event.detail.action, false);
+}
+
+forwardPlayPauseToRemote = (action) => {
     return new Promise(async (resolve) => {
-        const deck = document.getElementById('slider');
+        const deckgoRemoteElement = document.querySelector("deckgo-remote");
 
-        if (!deck) {
+        if (!deckgoRemoteElement) {
             resolve();
             return;
         }
 
-        const index = await deck.getActiveIndex();
-
-        const actionSlideElement = document.querySelector('.deckgo-slide-container:nth-child(' + (index + 1) + ')');
-
-        if (!actionSlideElement ||
-            (actionSlideElement.tagName !== 'deckgo-slide-youtube'.toUpperCase() &&
-             actionSlideElement.tagName !== 'deckgo-slide-big-img'.toUpperCase())) {
-            resolve();
-            return;
-        }
-
-        if (event.detail.action === 'pause') {
-            await actionSlideElement.pause();
+        if (action === 'pause') {
+            await deckgoRemoteElement.pause();
         } else {
-            await actionSlideElement.play();
+            await deckgoRemoteElement.play();
         }
 
         resolve();
     });
-}
+};
