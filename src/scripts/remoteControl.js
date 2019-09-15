@@ -23,7 +23,7 @@ remoteEvent = async (event) => {
             await slider.slidePrev(slideAnimation, slideAnimation);
             await pushStateSlideIndex(slider);
         } else if (type === 'slide_action') {
-            await youtubePlayPause(event);
+            await slidePlayPause(event);
         } else if (type === 'slide_to') {
             const index = event.detail.index;
             if (index >= 0) {
@@ -290,7 +290,7 @@ function scrollRemote(event) {
     });
 }
 
-function youtubePlayPause(event) {
+function slidePlayPause(event) {
     return new Promise(async (resolve) => {
         const deck = document.getElementById('slider');
 
@@ -301,17 +301,19 @@ function youtubePlayPause(event) {
 
         const index = await deck.getActiveIndex();
 
-        const youtubeSlideElement = document.querySelector('.deckgo-slide-container:nth-child(' + (index + 1) + ')');
+        const actionSlideElement = document.querySelector('.deckgo-slide-container:nth-child(' + (index + 1) + ')');
 
-        if (!youtubeSlideElement || youtubeSlideElement.tagName !== 'deckgo-slide-youtube'.toUpperCase()) {
+        if (!actionSlideElement ||
+            (actionSlideElement.tagName !== 'deckgo-slide-youtube'.toUpperCase() &&
+             actionSlideElement.tagName !== 'deckgo-slide-big-img'.toUpperCase())) {
             resolve();
             return;
         }
 
-        if (event.detail.action === 'youtube_pause') {
-            await youtubeSlideElement.pause();
+        if (event.detail.action === 'pause') {
+            await actionSlideElement.pause();
         } else {
-            await youtubeSlideElement.play();
+            await actionSlideElement.play();
         }
 
         resolve();
