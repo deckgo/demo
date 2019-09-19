@@ -22,7 +22,7 @@ Start you new presentation by following the quick  👉 [Getting Started guide](
 
 ## Example
    
-This [website](https://github.com/deckgo/deckdeckgo-website) is a full featured presentation developed with [DeckDeckGo].
+This [website](https://deckdeckgo.com) is a full featured presentation developed with [DeckDeckGo].
 
 ## Develop
 
