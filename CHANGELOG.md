@@ -1,3 +1,10 @@
+<a name="1.0.0-rc.3"></a>
+# [1.0.0-rc.3](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.2-1...v1.0.0-rc.3) (2019-11-10)
+
+### Features
+
+* update and sync content with new remote
+
 <a name="1.0.0-rc.2-1"></a>
 # [1.0.0-rc.2-1](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.2...v1.0.0-rc.2-1) (2019-09-16)
 
