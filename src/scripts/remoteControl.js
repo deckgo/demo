@@ -16,12 +16,12 @@ remoteEvent = async (event) => {
 
         if (type === 'next_slide') {
             const slideAnimation = event.detail.slideAnimation;
-            await slider.slideNext(slideAnimation, slideAnimation);
+            await slider.slideNext(slideAnimation, false);
             await pushStateSlideIndex(slider);
             await initActionPlayPause(slider);
         } else if (type === 'prev_slide') {
             const slideAnimation = event.detail.slideAnimation;
-            await slider.slidePrev(slideAnimation, slideAnimation);
+            await slider.slidePrev(slideAnimation, false);
             await pushStateSlideIndex(slider);
             await initActionPlayPause(slider);
         } else if (type === 'slide_action') {
@@ -112,15 +112,15 @@ function initDeck() {
             return;
         }
 
-        deck.addEventListener('slidesDidLoad', async (slides) => {
-            await initRemoteRoomServer(slides)
+        deck.addEventListener('slidesDidLoad', async ($event) => {
+            await initRemoteRoomServer($event)
         });
 
         resolve();
     });
 }
 
-function initRemoteRoomServer(slides) {
+function initRemoteRoomServer($event) {
     return new Promise(async (resolve) => {
         const deckgoRemoteElement = document.querySelector("deckgo-remote");
 
@@ -129,7 +129,7 @@ function initRemoteRoomServer(slides) {
             return;
         }
 
-        deckgoRemoteElement.slides = slides.detail;
+        deckgoRemoteElement.deck = $event.detail;
 
         if (!deckgoRemoteElement.room) {
             // In case the presentation is published and many users are browsing it, this enhance the change to have single id
@@ -179,11 +179,19 @@ function initDeckMove() {
         }
 
         deck.addEventListener('slideNextDidChange', async () => {
-            await slidePrevNext(true)
+            await slidePrevNext(true, false)
         });
 
         deck.addEventListener('slidePrevDidChange', async () => {
-            await slidePrevNext(false)
+            await slidePrevNext(false, false)
+        });
+
+        deck.addEventListener('slideNextDidAnimate', async () => {
+            await this.slidePrevNext(true, true)
+        });
+
+        deck.addEventListener('slidePrevDidAnimate', async () => {
+            await this.slidePrevNext(false, true)
         });
 
         deck.addEventListener('slideWillChange', async (event) => {
@@ -244,7 +252,7 @@ function slideToChange(event) {
     });
 }
 
-function slidePrevNext(next) {
+function slidePrevNext(next, animation) {
     return new Promise(async (resolve) => {
         const deckgoRemoteElement = document.querySelector("deckgo-remote");
 
@@ -254,9 +262,9 @@ function slidePrevNext(next) {
         }
 
         if (next) {
-            await deckgoRemoteElement.nextSlide();
+            await deckgoRemoteElement.nextSlide(animation);
         } else {
-            await deckgoRemoteElement.prevSlide();
+            await deckgoRemoteElement.prevSlide(animation);
         }
 
         resolve();
