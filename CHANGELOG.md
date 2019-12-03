@@ -1,3 +1,10 @@
+<a name="1.0.0-rc.4"></a>
+# [1.0.0-rc.4](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2019-12-03)
+
+### Features
+
+* starter kit release [v1.0.0-rc.6](https://github.com/deckgo/deckdeckgo-starter/releases/tag/v1.0.0-rc.6)
+
 <a name="1.0.0-rc.3"></a>
 # [1.0.0-rc.3](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.2-1...v1.0.0-rc.3) (2019-11-10)
 
