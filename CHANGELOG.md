@@ -1,3 +1,10 @@
+<a name="1.0.0-rc.4-1"></a>
+# [1.0.0-rc.4-1](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4...v1.0.0-rc.4-1) (2019-12-04)
+
+### Features
+
+* use `deckdeckgo.com/poll` instead of `poll.deckdeckgo.com` as uri for the live poll
+
 <a name="1.0.0-rc.4"></a>
 # [1.0.0-rc.4](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.3...v1.0.0-rc.4) (2019-12-03)
 
