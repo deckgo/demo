@@ -1,3 +1,10 @@
+<a name="1.0.0-rc.4-2"></a>
+# [1.0.0-rc.4-2](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-1...v1.0.0-rc.4-2) (2019-12-10)
+
+### Features
+
+* use new `deckdeckgo/core` to introduce deck transition
+
 <a name="1.0.0-rc.4-1"></a>
 # [1.0.0-rc.4-1](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4...v1.0.0-rc.4-1) (2019-12-04)
 
