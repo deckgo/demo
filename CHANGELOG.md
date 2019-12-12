@@ -1,3 +1,10 @@
+<a name="1.0.0-rc.4-3"></a>
+# [1.0.0-rc.4-3](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-2...v1.0.0-rc.4-3) (2019-12-12)
+
+### Features
+
+* use new `deckdeckgo/highlight-code` to display code in cards
+
 <a name="1.0.0-rc.4-2"></a>
 # [1.0.0-rc.4-2](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-1...v1.0.0-rc.4-2) (2019-12-10)
 
