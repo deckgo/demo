@@ -1,3 +1,14 @@
+<a name="1.0.0-rc.4-4"></a>
+# [1.0.0-rc.4-4](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-3...v1.0.0-rc.4-4) (2019-12-13)
+
+### Features
+
+* update `core` which applies slide effect on swipe only if such transition is specified
+
+### Fix
+
+* update `lazy-img` which wasn't displaying svg anymore
+
 <a name="1.0.0-rc.4-3"></a>
 # [1.0.0-rc.4-3](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-2...v1.0.0-rc.4-3) (2019-12-12)
 
