@@ -54,9 +54,11 @@ import {defineCustomElements as deckDeckGoSlideQRCodeElements } from '@deckdeckg
 import {defineCustomElements as deckDeckGoSlidePollElements } from '@deckdeckgo/slide-poll/dist/loader';
 
 import { defineCustomElements as deckDeckGoRemoteElements } from '@deckdeckgo/remote/dist/loader';
+
 import { defineCustomElements as deckDeckGoChartsElements } from '@deckdeckgo/charts/dist/loader';
 import { defineCustomElements as deckDeckGoQRCodeElements } from '@deckdeckgo/qrcode/dist/loader';
 import { defineCustomElements as deckDeckGoHighlightCodeElements } from '@deckdeckgo/highlight-code/dist/loader';
+import { defineCustomElements as deckDeckGoSocialElements } from '@deckdeckgo/social/dist/loader';
 
 // Init web-social-share
 import { defineCustomElements as webSocialShareElements } from 'web-social-share/dist/loader';
@@ -65,6 +67,7 @@ deckDeckGoElements(window).then(async () => {
     await deckDeckGoChartsElements(window);
     await deckDeckGoQRCodeElements(window);
     await deckDeckGoHighlightCodeElements(window);
+    await deckDeckGoSocialElements(window);
 
     const promises = [];
 
