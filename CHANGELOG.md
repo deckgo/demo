@@ -1,3 +1,14 @@
+<a name="1.0.0-rc.4-9"></a>
+# [1.0.0-rc.4-9](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-8...v1.0.0-rc.4-9) (2020-01-20)
+
+### Fix
+
+* add "question" to the titles for the list of slide to jump to
+
+### Features
+
+* bind click events after load
+
 <a name="1.0.0-rc.4-8"></a>
 # [1.0.0-rc.4-8](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.4-7...v1.0.0-rc.4-8) (2020-01-11)
 
