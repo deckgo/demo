@@ -20,6 +20,7 @@ import '@webcomponents/custom-elements';
 import * as manifestData from './manifest.json';
 window.ROOM_NAME = manifestData.name;
 
+import './scripts/buttons.js';
 import './scripts/loading.js';
 import './scripts/slider.js';
 import './scripts/sliderJumpTo.js';
@@ -99,3 +100,5 @@ deckDeckGoElements(window).then(async () => {
         await initRemote();
     });
 });
+
+initButtons();
