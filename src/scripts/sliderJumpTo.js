@@ -63,24 +63,18 @@ function getSlideTitle(slide, index) {
 
 jumpToSlide = async (index) => {
     await document.getElementById('slider').slideTo(index, 0);
-    await document.querySelector('ion-popover-controller').dismiss();
+    await document.querySelector('ion-popover').dismiss();
 };
 
 customElements.define('slides-list', SlidesList);
 
 presentSlidePicker = async () => {
-    const popoverController = document.querySelector('ion-popover-controller');
+    const popover = document.createElement('ion-popover');
+    popover.component = 'slides-list';
+    popover.translucent = true;
+    popover.cssClass = 'menu';
 
-    if (!popoverController) {
-        return;
-    }
-
-    await popoverController.componentOnReady();
-
-    const popover = await popoverController.create({
-        component: 'slides-list',
-        translucent: true
-    });
+    document.body.appendChild(popover);
 
     return await popover.present();
 };
