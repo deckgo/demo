@@ -243,7 +243,7 @@
 
             <!-- END: Your slides -->
 
-            <button slot="actions" style="color: inherit; outline: none; background: transparent; border-color: transparent;"><ion-icon name="more"></ion-icon></button>
+            <button slot="actions" style="color: inherit; outline: none; background: transparent; border-color: transparent;"><ion-icon ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon></button>
 
         </deckgo-deck>
 
@@ -257,14 +257,9 @@
 
         <ion-fab-button id="previous" color="primary" size="small"><ion-icon name="arrow-back" ariaLabel="Previous slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
         <ion-fab-button id="next" color="primary" size="small"><ion-icon name="arrow-forward" ariaLabel="Next slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
-        <ion-fab-button id="slidePicker" color="primary" size="small"><ion-icon name="list" md="md-list" ios="md-list" ariaLabel="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
+        <ion-fab-button id="slidePicker" color="primary" size="small"><ion-icon src="https://demo.deckdeckgo.com/assets/icons/md-list.svg" ariaLabel="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
         <ion-fab-button id="fullScreen" class="hide-on-mobile" color="primary" size="small"><ion-icon name="expand" ariaLabel="Full screen" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
     </ion-fab>
-
-    <!-- Ionic components anchors -->
-    <ion-popover-controller></ion-popover-controller>
-    <ion-modal-controller></ion-modal-controller>
-    <ion-alert-controller></ion-alert-controller>
 
     <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">
         <ion-icon name="logo-twitter" slot="twitter" style="color: #00aced; font-size: 1.6rem; display: block;"></ion-icon>
