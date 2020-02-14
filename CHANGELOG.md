@@ -5,6 +5,7 @@
 
 * upgrade to Ionic v5
 * update meta tags
+* add share to Hacker News
 
 ### Fix
 
