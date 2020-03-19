@@ -1,3 +1,12 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.5-1...v1.0.0) (2020-03-19)
+
+To infinity and beyond 🚀
+
+### Features
+
+* update dependencies
+
 <a name="1.0.0-rc.5-1"></a>
 # [1.0.0-rc.5-1](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.5...v1.0.0-rc.5-1) (2020-02-27)
 
