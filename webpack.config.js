@@ -58,7 +58,7 @@ module.exports = (env, argv) => {
 
     if (argv.mode === 'production') {
         plugins.push(new GenerateSW({
-            ignoreURLParametersMatching: [/./],
+            ignoreURLParametersMatching: [/.*/],
 
             runtimeCaching: [{
                 urlPattern: new RegExp(/^(?!.*(?:unsplash|giphy|tenor|firebasestorage))(?=.*(?:png|jpg|jpeg|svg|webp|gif)).*/),
