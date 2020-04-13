@@ -1,3 +1,10 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0...v2.0.0) (2020-04-13)
+
+### Breaking Changes
+
+* remote control access granted (or not) by presenter
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/deckgo/deckdeckgo-website/compare/v1.0.0-rc.5-1...v1.0.0) (2020-03-19)
 
