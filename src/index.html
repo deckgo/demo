@@ -252,13 +252,39 @@
     </ion-content>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
-        <ion-fab-button id="play" color="primary" size="small" style="display: none;"><ion-icon name="play" ariaLabel="Play video" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
-        <ion-fab-button id="pause" color="primary" size="small" style="display: none;"><ion-icon name="pause" ariaLabel="Pause video" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
+        <button id="play" class="navigation ion-activatable" style="display: none;">
+            <ion-icon name="play" aria-label="Play video" style="font-size: 1.4em;"></ion-icon>
+        </button>
 
-        <ion-fab-button id="previous" color="primary" size="small"><ion-icon name="arrow-back" ariaLabel="Previous slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
-        <ion-fab-button id="next" color="primary" size="small"><ion-icon name="arrow-forward" ariaLabel="Next slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
-        <ion-fab-button id="slidePicker" color="primary" size="small"><ion-icon src="https://demo.deckdeckgo.com/assets/icons/ionicons/md-list.svg" ariaLabel="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
-        <ion-fab-button id="fullScreen" class="hide-on-mobile" color="primary" size="small"><ion-icon name="expand" ariaLabel="Full screen" style="font-size: 1.4em;"></ion-icon></ion-fab-button>
+        <button id="pause" class="navigation ion-activatable" style="display: none;">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon name="pause" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="previous" class="navigation ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon name="arrow-back" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="next" class="navigation ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon name="arrow-forward" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="slidePicker" class="navigation ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="https://deckdeckgo.com/assets/icons/ionicons/md-list.svg" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="fullScreen" class="navigation ion-activatable hide-on-mobile">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon name="expand" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="remote" class="navigation ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon name="phone-portrait-outline" aria-label="Open Remote" style="font-size: 1.4em;"></ion-icon>
+        </button>
     </ion-fab>
 
     <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">

@@ -1,6 +1,9 @@
-remoteEvent = async (event) => {
+window.pendingRemoteRequests = [];
+window.remoteState = 0;
+
+remoteEvent = async ($event) => {
     return new Promise(async (resolve) => {
-        if (!event || !event.detail) {
+        if (!$event || !$event.detail) {
             resolve();
             return;
         }
@@ -12,31 +15,45 @@ remoteEvent = async (event) => {
             return;
         }
 
-        const type = event.detail.type;
+        const type = $event.detail.type;
 
         if (type === 'next_slide') {
-            const slideAnimation = event.detail.slideAnimation;
+            const slideAnimation = $event.detail.slideAnimation;
             await slider.slideNext(slideAnimation, false);
             await pushStateSlideIndex(slider);
             await initActionPlayPause(slider);
         } else if (type === 'prev_slide') {
-            const slideAnimation = event.detail.slideAnimation;
+            const slideAnimation = $event.detail.slideAnimation;
             await slider.slidePrev(slideAnimation, false);
             await pushStateSlideIndex(slider);
             await initActionPlayPause(slider);
         } else if (type === 'slide_action') {
-            await slidePlayPause(event);
+            await slidePlayPause($event);
         } else if (type === 'slide_to') {
-            const index = event.detail.index;
+            const index = $event.detail.index;
             if (index >= 0) {
                 await slider.slideTo(index, 0);
                 await pushStateSlideIndex(slider);
                 await initActionPlayPause(slider);
             }
+        } else if (type === 'deck_request') {
+            await openRemoteToGrantAccess($event.detail);
         }
 
         resolve();
     });
+};
+
+openRemoteToGrantAccess = async (fromClient) => {
+    const buttonPopover = document.querySelector('#remote');
+
+    if (!buttonPopover) {
+        return;
+    }
+
+    pendingRemoteRequests.push(fromClient);
+
+    buttonPopover.click();
 };
 
 reconnectRemoteControl = () => {
@@ -78,6 +95,11 @@ disconnectRemoteControl = () => {
 
 initRemote = async () => {
     return new Promise(async (resolve) => {
+        if (process.env.NO_REMOTE) {
+            resolve();
+            return;
+        }
+
         const deckgoRemoteElement = document.querySelector("deckgo-remote");
 
         if (!deckgoRemoteElement || !window) {
@@ -85,8 +107,12 @@ initRemote = async () => {
             return;
         }
 
-        deckgoRemoteElement.addEventListener('event', async event => {
-            await remoteEvent(event)
+        deckgoRemoteElement.addEventListener('event', async $event => {
+            await remoteEvent($event);
+        });
+
+        deckgoRemoteElement.addEventListener('state', async $event => {
+            window.remoteState = $event ? $event.detail : 0;
         });
 
         window.addEventListener('resize', async () => {
@@ -135,35 +161,11 @@ function initRemoteRoomServer($event) {
             // In case the presentation is published and many users are browsing it, this enhance the change to have single id
             // Or hash or timestamp would be better, but for the time being, a random number is readable and probably enough
             const roomNumber = Math.floor(Math.random() * 999);
-            const roomName = ROOM_NAME ? `${ROOM_NAME} *${roomNumber}` : `DeckDeckGo *${roomNumber}`;
-            deckgoRemoteElement.room = roomName;
-
-            const deck = document.getElementById('slider');
-            if (deck) {
-                const slideYoutube = deck.querySelector('deckgo-slide-youtube');
-
-                if (slideYoutube) {
-                    const slotTitle = slideYoutube.querySelector('[slot=\'title\']');
-
-                    if (slotTitle) {
-                        const element = document.createElement('h3');
-                        element.style.margin = '0 0 16px 0px';
-                        element.style.color = 'initial';
-                        element.setAttribute('slot', 'content');
-
-                        const small = document.createElement('small');
-                        small.style.fontSize = '65%';
-                        small.innerHTML = 'Find this presentation with the remote control 👉 ' + roomName;
-                        element.append(small);
-
-                        slotTitle.parentNode.insertBefore(element, slotTitle.nextSibling);
-                    }
-                }
-            }
+            deckgoRemoteElement.room = ROOM_NAME ? `${ROOM_NAME} *${roomNumber}` : `DeckDeckGo *${roomNumber}`;
         }
 
         // SIGNALING_SERVER is declared by Webpack, see webpack.config.js
-        deckgoRemoteElement.server = process.env.SIGNALING_SERVER;
+        deckgoRemoteElement.socketUrl = process.env.SIGNALING_SERVER;
 
         resolve();
     });
