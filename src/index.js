@@ -11,9 +11,8 @@ import './css/signup.css';
 import './css/img.css';
 import './css/button.css';
 
-import '../node_modules/@deckdeckgo/deck-utils/styles/deckdeckgo-deck.css';
-import '../node_modules/@deckdeckgo/deck-utils/styles/deckdeckgo-deck-fonts.css';
-import '../node_modules/@deckdeckgo/deck-utils/styles/deckdeckgo-deck-rtl.css';
+import '../node_modules/@deckdeckgo/deck-utils/css/deck.css';
+import '../node_modules/@deckdeckgo/deck-utils/css/fullscreen.css';
 
 import '@webcomponents/custom-elements';
 
