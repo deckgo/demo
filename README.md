@@ -45,3 +45,4 @@ MIT © [David Dal Busco](mailto:david.dalbusco@outlook.com) and [Nicolas Mattia]
 The icons (`desktop-light.svg`, `mobile-light.svg`, `projector.svg` and `tablet-light.svg`) licences' are registered to David Dal Busco, Zürich, Switzerland.
 
 [DeckDeckGo]: https://deckdeckgo.com
+
