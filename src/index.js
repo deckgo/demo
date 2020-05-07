@@ -60,6 +60,7 @@ import { defineCustomElements as deckDeckGoQRCodeElements } from '@deckdeckgo/qr
 import { defineCustomElements as deckDeckGoHighlightCodeElements } from '@deckdeckgo/highlight-code/dist/loader';
 import { defineCustomElements as deckDeckGoSocialElements } from '@deckdeckgo/social/dist/loader';
 import { defineCustomElements as deckDeckGoYoutubeElements } from '@deckdeckgo/youtube/dist/loader';
+import { defineCustomElements as deckDeckGoDemoElements } from '@deckdeckgo/demo/dist/loader';
 
 // Init web-social-share
 import { defineCustomElements as webSocialShareElements } from 'web-social-share/dist/loader';
@@ -70,6 +71,7 @@ deckDeckGoElements().then(async () => {
     await deckDeckGoHighlightCodeElements();
     await deckDeckGoSocialElements();
     await deckDeckGoYoutubeElements();
+    await defineCustomElements();
 
     const promises = [];
 
