@@ -71,7 +71,7 @@ deckDeckGoElements().then(async () => {
     await deckDeckGoHighlightCodeElements();
     await deckDeckGoSocialElements();
     await deckDeckGoYoutubeElements();
-    await defineCustomElements();
+    await deckDeckGoDemoElements();
 
     const promises = [];
 
