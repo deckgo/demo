@@ -52,6 +52,7 @@ import {defineCustomElements as deckDeckGoSlideCodeElements } from '@deckdeckgo/
 import {defineCustomElements as deckDeckGoSlideGifElements } from '@deckdeckgo/slide-gif/dist/loader';
 import {defineCustomElements as deckDeckGoSlideQRCodeElements } from '@deckdeckgo/slide-qrcode/dist/loader';
 import {defineCustomElements as deckDeckGoSlidePollElements } from '@deckdeckgo/slide-poll/dist/loader';
+import {defineCustomElements as deckDeckGoSlidePlaygroundElements } from '@deckdeckgo/slide-playground/dist/loader';
 
 import { defineCustomElements as deckDeckGoRemoteElements } from '@deckdeckgo/remote/dist/loader';
 
@@ -85,6 +86,7 @@ deckDeckGoElements().then(async () => {
     promises.push(deckDeckGoSlideGifElements());
     promises.push(deckDeckGoSlideQRCodeElements());
     promises.push(deckDeckGoSlidePollElements());
+    promises.push(deckDeckGoSlidePlaygroundElements());
 
     await Promise.all(promises);
 
