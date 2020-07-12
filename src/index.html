@@ -122,7 +122,7 @@
                 </div>
             </deckgo-slide-title>
 
-            <deckgo-slide-split style="color: var(--ion-color-dark); --slide-split-color-start: var(--ion-color-light); --slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-dark); --slide-split-background-start: var(--ion-color-dark)">
+            <deckgo-slide-split custom-header custom-footer style="color: var(--ion-color-dark); --slide-split-color-start: var(--ion-color-dark-contrast); --slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-dark); --slide-split-background-start: var(--ion-color-dark)">
                 <h1 slot="title">Keep in touch</h1>
                 <div slot="start">
                     <p style="font-size: 2em;">Join our Newsletter 👋</p>
@@ -147,7 +147,6 @@
                         </div>
                     </form>
                     <!--End mc_embed_signup-->
-
                 </div>
             </deckgo-slide-split>
 
@@ -182,8 +181,8 @@
 
             <deckgo-slide-gif style="background: white;" src="https://media.giphy.com/media/xUA7baWfTjfHGLZc3e/giphy.gif" alt="Template for gif" fullscreen="true">
                 <h1 slot="title">Gif template</h1>
-                <h1 slot="header" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">Or this template...</h1>
-                <h2 slot="footer" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">...for GIFs</h2>
+                <h1 slot="top" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">Or this template...</h1>
+                <h2 slot="bottom" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">...for GIFs</h2>
             </deckgo-slide-gif>
 
             <deckgo-slide-poll>
@@ -252,6 +251,12 @@
             </deckgo-slide-title>
 
             <!-- END: Your slides -->
+
+            <div slot="header"><img style="max-height: 32px; padding-right: 8px;" src="https://deckdeckgo.com/assets/favicon/icon-default-512x512.png" /> DeckDeckGo</div>
+
+            <div slot="footer">
+                <deckgo-social twitter="deckdeckgo"><ion-icon name="logo-twitter" aria-label="Twitter" style="color: #00aced; font-size: 1.4em;" slot="icon">@deckdeckgo</deckgo-social>
+            </div>
 
             <button slot="actions" style="color: inherit; outline: none; background: transparent; border-color: transparent; font-size: 1.6rem;"><ion-icon ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon></button>
 
