@@ -1,3 +1,11 @@
+<a name="2.4.1"></a>
+# [2.4.1](https://github.com/deckgo/deckdeckgo-website/compare/v2.4.0...v2.4.1) (2020-08-06)
+
+### Features
+
+- remove resize hack for Chrome 77
+- update dependencies
+
 <a name="2.4.0"></a>
 # [2.4.0](https://github.com/deckgo/deckdeckgo-website/compare/v2.3.0...v2.4.0) (2020-07-12)
 
