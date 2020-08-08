@@ -1,3 +1,11 @@
+<a name="2.4.2"></a>
+# [2.4.2](https://github.com/deckgo/deckdeckgo-website/compare/v2.4.1...v2.4.2) (2020-08-08)
+
+### Features
+
+- pager hidden per default
+- update highlight-code dependency
+
 <a name="2.4.1"></a>
 # [2.4.1](https://github.com/deckgo/deckdeckgo-website/compare/v2.4.0...v2.4.1) (2020-08-06)
 
