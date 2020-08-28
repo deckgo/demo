@@ -4,6 +4,7 @@
 ### Features
 
 - repo renamed
+- use webpack-dev-server
 
 <a name="2.4.2"></a>
 # [2.4.2](https://github.com/deckgo/demo/compare/v2.4.1...v2.4.2) (2020-08-08)
