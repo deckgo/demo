@@ -1,6 +1,6 @@
 {
-  "name": "deckdeckgo-demo",
-  "version": "2.4.2",
+  "name": "demo",
+  "version": "3.0.0",
   "description": "The Progressive Web App alternative for simple presentations",
   "homepage": "https://deckdeckgo.com",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/deckgo/deckdeckgo-demo.git"
+    "url": "git://github.com/deckgo/demo.git"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
