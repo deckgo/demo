@@ -1,3 +1,15 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/deckgo/demo/compare/v3.0.0...v4.0.0) (2020-09-03)
+
+### Breaking Changes
+
+- E11, Edge 16-18 and Safari 10 not supported
+
+### Features
+
+- update all dependencies including all DeckDeckGo Web Components build with Stencil v2
+- remove Custom Elements (v1) Polyfill
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/deckgo/demo/compare/v2.4.2...v3.0.0) (2020-08-28)
 
