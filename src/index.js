@@ -10,8 +10,6 @@ import manifest from './manifest.json';
 const { name } = manifest;
 
 window.ROOM_NAME = name;
-
-window.ROOM_NAME = name;
 window.EMBEDDED = false;
 window.PENDING_REMOTE_REQUESTS = [];
 window.REMOTE_STATE = 0;
