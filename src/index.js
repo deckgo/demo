@@ -4,6 +4,8 @@ import './css/variables.css';
 
 import '../node_modules/@deckdeckgo/deck-utils/css/deck.css';import '../node_modules/@deckdeckgo/kit/css/kit.css';
 
+import './scripts/demo-modal';
+
 import {initReload, initButtons, initFullscreen, initActions, postLoading, initRemote, postLoadingJumpTo, initDeckHistoryWatch} from "@deckdeckgo/kit";
 
 import manifest from './manifest.json';
