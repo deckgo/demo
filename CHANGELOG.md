@@ -1,3 +1,10 @@
+<a name="7.0.0"></a>
+# [7.0.0](https://github.com/deckgo/demo/compare/v6.0.0...v7.0.0) (2020-11-02)
+
+### Breaking Changes
+
+- new look with more app components
+
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/deckgo/demo/compare/v5.1.0...v6.0.0) (2020-10-26)
 
