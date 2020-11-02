@@ -104,204 +104,212 @@
 <body>
 
 <ion-app class="loading">
-    <ion-content force-overscroll="false">
-        <deckgo-deck id="slider" transition="fade">
 
-            <!-- BEGIN: Your slides -->
+    <ion-menu id="ion-menu" side="start" type="overlay" swipeGesture="false" content-id="main">
+        <ion-content>
+            <deckgo-chapters></deckgo-chapters>
+        </ion-content>
+    </ion-menu>
 
-            <deckgo-slide-title>
-                <h1 slot="title">DeckDeckGo</h1>
-                <div no-shadow slot="content">
-                    <p style="margin: 0;">The web open source <strong>editor</strong> for presentations</p>
+    <div class="ion-page" id="main">
+        <ion-header>
+            <ion-toolbar color="dark">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>The web open source editor for presentations</ion-title>
+                <ion-buttons slot="end">
+                    <ion-button id="deckMenu"><ion-icon ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon></ion-button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
 
-                    <h2 style="margin: 0;">👉</h2>
-                </div>
-            </deckgo-slide-title>
+        <ion-content force-overscroll="false" style="position: relative; --overflow: hidden;">
+            <deckgo-deck id="slider" embedded="true" transition="fade">
 
-            <deckgo-slide-title style="--background: white; --color: var(--ion-color-dark);">
-                <h3 slot="title">Edit your deck anywhere, display it everywhere</h3>
-                <div no-shadow slot="content" style="max-width: 100%;">
-                    <div padding-top style="display: flex; align-items: center; justify-content: center;">
-                        <ion-icon padding style="font-size: 4rem" src="https://demo.deckdeckgo.com/assets/img/mobile-light.svg"></ion-icon>
-                        <ion-icon padding style="font-size: 6rem" src="https://demo.deckdeckgo.com/assets/img/tablet-light.svg"></ion-icon>
-                        <ion-icon padding style="font-size: 6.6rem" src="https://demo.deckdeckgo.com/assets/img/desktop-light.svg"></ion-icon>
-                        <ion-icon padding style="font-size: 6.6rem" src="https://demo.deckdeckgo.com/assets/img/projector.svg"></ion-icon>
+                <!-- BEGIN: Your slides -->
+
+                <deckgo-slide-title>
+                    <h1 slot="title">DeckDeckGo</h1>
+                    <div no-shadow slot="content">
+                        <p style="margin: 0;">The web open source <strong>editor</strong> for presentations</p>
+
+                        <h2 style="margin: 0;">👉</h2>
                     </div>
-                </div>
-            </deckgo-slide-title>
+                </deckgo-slide-title>
 
-            <deckgo-slide-split custom-header custom-footer style="color: var(--ion-color-dark); --slide-split-color-start: var(--ion-color-dark-contrast); --slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-dark); --slide-split-background-start: var(--ion-color-dark)">
-                <h1 slot="title">Keep in touch</h1>
-                <div slot="start">
-                    <p style="font-size: 2em;">Join our Newsletter 👋</p>
-                </div>
-                <div slot="end" style="text-align: center; width: 100%;">
-                    <!-- Begin Mailchimp Signup Form -->
-                    <form action="https://deckdeckgo.us20.list-manage.com/subscribe/post?u=9b5f83c6cb1006ea8f7225ccb&amp;id=3a584996fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <div margin-top margin-bottom>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" style="width: 100%; padding: 8px 0; text-indent: 2%; border: 1px solid #ABB0B2; border-radius: 4px;">
-                            </div>
-                            <div id="mce-responses">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -50000px;" aria-hidden="true"><input type="text" name="b_9b5f83c6cb1006ea8f7225ccb_264e8d156c" tabindex="-1" value=""></div>
-                            <div>
-                                <ion-button type="submit" color="dark" shape="round" size="large" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-                                    Subscribe
-                                </ion-button>
-                            </div>
+                <deckgo-slide-title style="--background: white; --color: var(--ion-color-dark);">
+                    <h3 slot="title">Edit your deck anywhere, display it everywhere</h3>
+                    <div no-shadow slot="content" style="max-width: 100%;">
+                        <div padding-top style="display: flex; align-items: center; justify-content: center;">
+                            <ion-icon padding style="font-size: 4rem" src="https://demo.deckdeckgo.com/assets/img/mobile-light.svg"></ion-icon>
+                            <ion-icon padding style="font-size: 6rem" src="https://demo.deckdeckgo.com/assets/img/tablet-light.svg"></ion-icon>
+                            <ion-icon padding style="font-size: 6.6rem" src="https://demo.deckdeckgo.com/assets/img/desktop-light.svg"></ion-icon>
+                            <ion-icon padding style="font-size: 6.6rem" src="https://demo.deckdeckgo.com/assets/img/projector.svg"></ion-icon>
                         </div>
-                    </form>
-                    <!--End mc_embed_signup-->
-                </div>
-            </deckgo-slide-split>
-
-            <deckgo-slide-split>
-                <h1 slot="title">Progressive Web App</h1>
-                <h3 slot="start" style="margin: 0; color: black;">Publish your presentation as a <strong>Progressive Web App</strong></h3>
-                <div slot="end" style="text-align: center; width: 100%;">
-                    <img data-src="https://demo.deckdeckgo.com/assets/img/deckdeckgo-homecoming.png" style="width: 20vw;" alt="Publish your presentation as a Progressive Web App with offline support"/>
-                </div>
-            </deckgo-slide-split>
-
-            <deckgo-slide-split type="demo">
-                <h1 slot="title">Demo</h1>
-                <h3 slot="start">Showcase Your Interactive Apps</h3>
-                <deckgo-demo style="display: block;" slot="end" src="https://tietracker.com"></deckgo-demo>
-            </deckgo-slide-split>
-
-            <deckgo-slide-youtube src="https://www.youtube.com/watch?v=3o3oGBTTRSs" style="--background: white; --color: var(--ion-color-tertiary);">
-                <h2 slot="title">Remote Control</h2>
-            </deckgo-slide-youtube>
-
-            <deckgo-slide-author img-src="https://pbs.twimg.com/profile_images/941274539979366400/bTKGkd-O_400x400.jpg">
-                <h1 slot="title">Templates</h1>
-                <div slot="author">
-                    <h3 style="padding: 0;">Templates</h3>
-                    <p>Use predefined slides for quick editing ⚡ Like this template to introduce the author of the talk 🎤</p>
-                </div>
-                <deckgo-social slot="social-link" twitter="daviddalbusco"><ion-icon area-label="David on Twitter" slot="icon" name="logo-twitter"></ion-icon></deckgo-social>
-                <deckgo-social slot="social-link" linkedin="david-dal-busco/"><ion-icon area-label="David on Linkedin" slot="icon" name="logo-linkedin"></ion-icon></deckgo-social>
-                <deckgo-social slot="social-link" medium="david.dalbusco"><img style="width: 1em;" area-label="David on Medium" slot="icon" src="https://demo.deckdeckgo.com/assets/icons/medium.svg"/></deckgo-social>
-            </deckgo-slide-author>
-
-            <deckgo-slide-gif style="background: white;" src="https://media.giphy.com/media/xUA7baWfTjfHGLZc3e/giphy.gif" alt="Template for gif" fullscreen="true">
-                <h1 slot="title">Gif template</h1>
-                <h1 slot="top" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">Or this template...</h1>
-                <h2 slot="bottom" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">...for GIFs</h2>
-            </deckgo-slide-gif>
-
-            <deckgo-slide-poll>
-                <h2 slot="question" style="overflow: visible">Interact with your audience with a live poll?</h2>
-                <p slot="answer-1">Sure cool</p>
-                <p slot="answer-2">Not interested</p>
-                <p slot="answer-3">Yes</p>
-                <p slot="how-to">Go to <a href="https://deckdeckgo.com/poll">deckdeckgo.com/poll</a> and use the code {0}</p>
-                <p slot="awaiting-votes">Awaiting first votes</p>
-            </deckgo-slide-poll>
-
-            <deckgo-slide-chart type="line" grid="true" date-pattern="dd.MM.yyyy" animation="true"
-                                src="https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-multiple.csv"
-                                ticks="5" style="--background: white;--color: black;">
-                <h3 slot="title">Or the template for charts</h3>
-            </deckgo-slide-chart>
-
-            <deckgo-slide-code src="https://demo.deckdeckgo.com/assets/code/deckdeckgo-slide-code-example.txt" style="--code-margin-bottom: 6rem; --background: var(--ion-color-dark); --color: var(--ion-color-light); --code-color: var(--ion-color-light);">
-                <h2 slot="title">Showcase your code</h2>
-            </deckgo-slide-code>
-
-            <deckgo-slide-playground src="https://codepen.io/peterpeterparker/pen/dyGbOZm">
-                <h2 slot="title">Or your best playgrounds</h2>
-            </deckgo-slide-playground>
-
-            <deckgo-slide-title>
-                <h2 slot="title">Reveal</h2>
-                <p no-shadow slot="content">
-                    <deckgo-reveal style="width: auto;"><span>A</span><span style="margin-left: 8px; margin-right: 8px;">journey</span><span style="margin-right: 8px;">miles thousand a of</span><span style="color: var(--ion-color-warning);" style="margin-right: 8px;"><strong>step single a with begins</strong> - </span><span>Laozi</span></deckgo-reveal>
-                </p>
-            </deckgo-slide-title>
-
-            <deckgo-slide-qrcode content="https://deckdeckgo.com">
-                <h1 slot="title">QR Code</h1>
-                <p slot="content">Display a QR code to let your audience get your slides as a PWA without any delay</p>
-            </deckgo-slide-qrcode>
-
-            <deckgo-slide-title>
-                <h2 slot="title">Cherry on the cake 🍒🍰</h2>
-                <div slot="content">
-                    <p>Add any <strong>Ionic</strong> components to your presentation</p>
-                    <div padding-top>
-                        <ion-button onclick="presentModal()" shape="round" size="large" color="tertiary">Like this button</ion-button>
                     </div>
-                </div>
-            </deckgo-slide-title>
+                </deckgo-slide-title>
 
-            <deckgo-slide-title style="--background: var(--ion-color-dark); --color: var(--ion-color-light);">
-                <h2 slot="title">Get started now 🔥</h2>
-                <div slot="content">
-                    <div style="padding: 32px;">
-                        <code style="background-image: var(--ion-color-dark);" padding>
-                            $ npm init deckdeckgo
-                        </code>
+                <deckgo-slide-split custom-header custom-footer style="color: var(--ion-color-dark); --slide-split-color-start: var(--ion-color-dark-contrast); --slide-split-align: center; --slide-split-text-align: center; --slide-split-background-end: white; --slide-split-color-end: var(--ion-color-dark); --slide-split-background-start: var(--ion-color-dark)">
+                    <h1 slot="title">Keep in touch</h1>
+                    <div slot="start">
+                        <p style="font-size: 2em;">Join our Newsletter 👋</p>
                     </div>
+                    <div slot="end" style="text-align: center; width: 100%;">
+                        <!-- Begin Mailchimp Signup Form -->
+                        <form action="https://deckdeckgo.us20.list-manage.com/subscribe/post?u=9b5f83c6cb1006ea8f7225ccb&amp;id=3a584996fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <div margin-top margin-bottom>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" style="width: 100%; padding: 8px 0; text-indent: 2%; border: 1px solid #ABB0B2; border-radius: 4px;">
+                                </div>
+                                <div id="mce-responses">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -50000px;" aria-hidden="true"><input type="text" name="b_9b5f83c6cb1006ea8f7225ccb_264e8d156c" tabindex="-1" value=""></div>
+                                <div>
+                                    <ion-button type="submit" color="dark" shape="round" size="large" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+                                        Subscribe
+                                    </ion-button>
+                                </div>
+                            </div>
+                        </form>
+                        <!--End mc_embed_signup-->
+                    </div>
+                </deckgo-slide-split>
 
-                    <p style="margin-bottom: 0; margin-top: 16px; font-size: 0.5em;">
-                        Dive deeper with the <a href="https://docs.deckdeckgo.com">Getting Started guide</a>
+                <deckgo-slide-split>
+                    <h1 slot="title">Progressive Web App</h1>
+                    <h3 slot="start" style="margin: 0; color: black;">Publish your presentation as a <strong>Progressive Web App</strong></h3>
+                    <div slot="end" style="text-align: center; width: 100%;">
+                        <img data-src="https://demo.deckdeckgo.com/assets/img/deckdeckgo-homecoming.png" style="width: 20vw;" alt="Publish your presentation as a Progressive Web App with offline support"/>
+                    </div>
+                </deckgo-slide-split>
+
+                <deckgo-slide-split type="demo">
+                    <h1 slot="title">Demo</h1>
+                    <h3 slot="start">Showcase Your Interactive Apps</h3>
+                    <deckgo-demo style="display: block;" slot="end" src="https://tietracker.com"></deckgo-demo>
+                </deckgo-slide-split>
+
+                <deckgo-slide-youtube src="https://www.youtube.com/watch?v=3o3oGBTTRSs" style="--background: white; --color: var(--ion-color-tertiary);">
+                    <h2 slot="title">Remote Control</h2>
+                </deckgo-slide-youtube>
+
+                <deckgo-slide-author img-src="https://pbs.twimg.com/profile_images/941274539979366400/bTKGkd-O_400x400.jpg">
+                    <h1 slot="title">Templates</h1>
+                    <div slot="author">
+                        <h3 style="padding: 0;">Templates</h3>
+                        <p>Use predefined slides for quick editing ⚡ Like this template to introduce the author of the talk 🎤</p>
+                    </div>
+                    <deckgo-social slot="social-link" twitter="daviddalbusco"><ion-icon area-label="David on Twitter" slot="icon" name="logo-twitter"></ion-icon></deckgo-social>
+                    <deckgo-social slot="social-link" linkedin="david-dal-busco/"><ion-icon area-label="David on Linkedin" slot="icon" name="logo-linkedin"></ion-icon></deckgo-social>
+                    <deckgo-social slot="social-link" medium="david.dalbusco"><img style="width: 1em;" area-label="David on Medium" slot="icon" src="https://demo.deckdeckgo.com/assets/icons/medium.svg"/></deckgo-social>
+                </deckgo-slide-author>
+
+                <deckgo-slide-gif style="background: white;" src="https://media.giphy.com/media/xUA7baWfTjfHGLZc3e/giphy.gif" alt="Template for gif" fullscreen="true">
+                    <h1 slot="title">Gif template</h1>
+                    <h1 slot="top" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">Or this template...</h1>
+                    <h2 slot="bottom" style="font-weight: 300; --background: white; --color: var(--ion-color-dark);">...for GIFs</h2>
+                </deckgo-slide-gif>
+
+                <deckgo-slide-poll>
+                    <h2 slot="question" style="overflow: visible">Interact with your audience with a live poll?</h2>
+                    <p slot="answer-1">Sure cool</p>
+                    <p slot="answer-2">Not interested</p>
+                    <p slot="answer-3">Yes</p>
+                    <p slot="how-to">Go to <a href="https://deckdeckgo.com/poll">deckdeckgo.com/poll</a> and use the code {0}</p>
+                    <p slot="awaiting-votes">Awaiting first votes</p>
+                </deckgo-slide-poll>
+
+                <deckgo-slide-chart type="line" grid="true" date-pattern="dd.MM.yyyy" animation="true"
+                                    src="https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-multiple.csv"
+                                    ticks="5" style="--background: white;--color: black;">
+                    <h3 slot="title">Or the template for charts</h3>
+                </deckgo-slide-chart>
+
+                <deckgo-slide-code src="https://demo.deckdeckgo.com/assets/code/deckdeckgo-slide-code-example.txt" style="--code-margin-bottom: 6rem; --background: var(--ion-color-dark); --color: var(--ion-color-light); --code-color: var(--ion-color-light);">
+                    <h2 slot="title">Showcase your code</h2>
+                </deckgo-slide-code>
+
+                <deckgo-slide-playground src="https://codepen.io/peterpeterparker/pen/dyGbOZm">
+                    <h2 slot="title">Or your best playgrounds</h2>
+                </deckgo-slide-playground>
+
+                <deckgo-slide-title>
+                    <h2 slot="title">Reveal</h2>
+                    <p no-shadow slot="content">
+                        <deckgo-reveal style="width: auto;"><span>A</span><span style="margin-left: 8px; margin-right: 8px;">journey</span><span style="margin-right: 8px;">miles thousand a of</span><span style="color: var(--ion-color-warning);" style="margin-right: 8px;"><strong>step single a with begins</strong> - </span><span>Laozi</span></deckgo-reveal>
                     </p>
+                </deckgo-slide-title>
+
+                <deckgo-slide-qrcode content="https://deckdeckgo.com">
+                    <h1 slot="title">QR Code</h1>
+                    <p slot="content">Display a QR code to let your audience get your slides as a PWA without any delay</p>
+                </deckgo-slide-qrcode>
+
+                <deckgo-slide-title>
+                    <h2 slot="title">Cherry on the cake 🍒🍰</h2>
+                    <div slot="content">
+                        <p>Add any <strong>Ionic</strong> components to your presentation</p>
+                        <div padding-top>
+                            <ion-button onclick="presentModal()" shape="round" size="large" color="tertiary">Like this button</ion-button>
+                        </div>
+                    </div>
+                </deckgo-slide-title>
+
+                <deckgo-slide-title style="--background: var(--ion-color-dark); --color: var(--ion-color-light);">
+                    <h2 slot="title">Get started now 🔥</h2>
+                    <div slot="content">
+                        <div style="padding: 32px;">
+                            <code style="background-image: var(--ion-color-dark);" padding>
+                                $ npm init deckdeckgo
+                            </code>
+                        </div>
+
+                        <p style="margin-bottom: 0; margin-top: 16px; font-size: 0.5em;">
+                            Dive deeper with the <a href="https://docs.deckdeckgo.com">Getting Started guide</a>
+                        </p>
+                    </div>
+                </deckgo-slide-title>
+
+                <!-- END: Your slides -->
+
+                <div slot="footer">
+                    <deckgo-social twitter="deckdeckgo"><ion-icon name="logo-twitter" aria-label="Twitter" style="color: #00aced; font-size: 1.4em;" slot="icon">@deckdeckgo</deckgo-social>
                 </div>
-            </deckgo-slide-title>
 
-            <!-- END: Your slides -->
+            </deckgo-deck>
 
-            <div slot="header"><img style="max-height: 32px; padding-right: 8px;" src="https://deckdeckgo.com/assets/favicon/icon-default-512x512.png" /> DeckDeckGo</div>
+            <deckgo-remote></deckgo-remote>
 
-            <div slot="footer">
-                <deckgo-social twitter="deckdeckgo"><ion-icon name="logo-twitter" aria-label="Twitter" style="color: #00aced; font-size: 1.4em;" slot="icon">@deckdeckgo</deckgo-social>
-            </div>
+            <button id="previous" class="navigation ion-activatable">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-icon name="chevron-back-outline" aria-label="Previous slide"></ion-icon>
+            </button>
 
-            <button slot="actions" style="color: inherit; outline: none; background: transparent; border-color: transparent; font-size: 1.6rem;"><ion-icon ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon></button>
+            <button id="next" class="navigation ion-activatable">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-icon name="chevron-forward-outline" aria-label="Next slide"></ion-icon>
+            </button>
 
-        </deckgo-deck>
+        </ion-content>
+    </div>
 
-        <deckgo-remote></deckgo-remote>
-
-    </ion-content>
-
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
-        <button id="play" class="navigation ion-activatable" style="display: none;">
-            <ion-icon name="play" aria-label="Play video" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button id="pause" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="pause" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button id="previous" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="arrow-back" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button id="next" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="arrow-forward" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
+    <ion-fab vertical="top" horizontal="end" slot="fixed" id="navigation">
         <button id="slidePicker" class="navigation ion-activatable">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="https://deckdeckgo.com/assets/icons/ionicons/md-list.svg" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon>
+            <ion-icon src="https://deckdeckgo.com/assets/icons/ionicons/md-list.svg" aria-label="Jump to a particular slide"></ion-icon>
         </button>
 
         <button id="fullScreen" class="navigation ion-activatable hide-on-mobile">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="expand" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon>
+            <ion-icon name="contract-outline" aria-label="Exit full screen"></ion-icon>
         </button>
 
         <button id="remote" class="navigation ion-activatable">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="phone-portrait-outline" aria-label="Open Remote" style="font-size: 1.4em;"></ion-icon>
+            <ion-icon name="phone-portrait-outline" aria-label="Open Remote"></ion-icon>
         </button>
     </ion-fab>
 
