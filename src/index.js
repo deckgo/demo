@@ -40,6 +40,7 @@ import { defineCustomElements as deckDeckGoChartsElements } from '@deckdeckgo/ch
 import { defineCustomElements as deckDeckGoQRCodeElements } from '@deckdeckgo/qrcode/dist/loader';
 import { defineCustomElements as deckDeckGoHighlightCodeElements } from '@deckdeckgo/highlight-code/dist/loader';
 import { defineCustomElements as deckDeckGoSocialElements } from '@deckdeckgo/social/dist/loader';
+import { defineCustomElements as deckDeckGoRevealElements } from '@deckdeckgo/reveal/dist/loader';
 import { defineCustomElements as deckDeckGoYoutubeElements } from '@deckdeckgo/youtube/dist/loader';
 import { defineCustomElements as deckDeckGoDemoElements } from '@deckdeckgo/demo/dist/loader';
 
@@ -51,6 +52,7 @@ deckDeckGoElements().then(async () => {
     await deckDeckGoQRCodeElements();
     await deckDeckGoHighlightCodeElements();
     await deckDeckGoSocialElements();
+    await deckDeckGoRevealElements();
     await deckDeckGoYoutubeElements();
     await deckDeckGoDemoElements();
 

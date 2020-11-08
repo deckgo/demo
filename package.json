@@ -41,6 +41,7 @@
     "@deckdeckgo/lazy-img": "^3.0.0",
     "@deckdeckgo/qrcode": "^2.0.1",
     "@deckdeckgo/remote": "^2.0.1",
+    "@deckdeckgo/reveal": "^1.0.0",
     "@deckdeckgo/slide-author": "^2.1.3",
     "@deckdeckgo/slide-chart": "^2.1.3",
     "@deckdeckgo/slide-code": "^3.0.3",
