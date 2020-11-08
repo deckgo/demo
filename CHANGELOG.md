@@ -1,3 +1,14 @@
+<a name="7.0.1"></a>
+# [7.0.1](https://github.com/deckgo/demo/compare/v7.0.0...v7.0.1) (2020-11-08)
+
+### Features
+
+- improve lazy loading
+
+### Fix
+
+- remote request popover position
+
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/deckgo/demo/compare/v6.0.0...v7.0.0) (2020-11-02)
 
