@@ -1,3 +1,10 @@
+<a name="7.0.2"></a>
+# [7.0.2](https://github.com/deckgo/demo/compare/v7.0.1...v7.0.2) (2020-11-08)
+
+### Fix
+
+- missing reveal component
+
 <a name="7.0.1"></a>
 # [7.0.1](https://github.com/deckgo/demo/compare/v7.0.0...v7.0.1) (2020-11-08)
 
