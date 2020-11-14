@@ -1,3 +1,10 @@
+<a name="7.1.0"></a>
+# [7.1.0](https://github.com/deckgo/demo/compare/v7.0.2...v7.1.0) (2020-11-14)
+
+### Features
+
+- selectable text and clickable links
+
 <a name="7.0.2"></a>
 # [7.0.2](https://github.com/deckgo/demo/compare/v7.0.1...v7.0.2) (2020-11-08)
 
