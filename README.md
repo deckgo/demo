@@ -6,7 +6,6 @@ The web open source editor for presentations.
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Example](#example)
 - [Develop](#develop)
 - [License](#license)
 
@@ -14,19 +13,15 @@ The web open source editor for presentations.
 
 This project used to be the original website of [DeckDeckGo].
 
-Following the launch of our web open source editor, it has become a demo of what could be developed with our developer kit. 
+Following the launch of our web open source editor, it has become a demo of what can be created with our developer kit. 
 
 ## Getting Started
 
-If you are looking to develop your own deck, using HTML or Markdown, follow the quick  👉 [Getting Started guide](https://docs.deckdeckgo.com/docs) 👈
-
-## Example
-   
-This [website](https://demo.deckdeckgo.com) is a full featured presentation developed with the [DeckDeckGo] developer starter kit.
+If you are looking to develop your own deck with HTML, follow the quick [Getting Started guide](https://docs.deckdeckgo.com/docs).
 
 ## Develop
 
-If you wish to develop and run this project locally, run the following commands: 
+If you wish to develop and run this project locally, execute the following commands: 
 
 ```bash
 git clone https://github.com/deckgo/demo
