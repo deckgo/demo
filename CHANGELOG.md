@@ -1,3 +1,10 @@
+<a name="7.1.2"></a>
+# [7.1.2](https://github.com/deckgo/demo/compare/v7.1.1...v7.1.2) (2021-01-26)
+
+### Build
+
+- update dependencies
+
 <a name="7.1.1"></a>
 # [7.1.1](https://github.com/deckgo/demo/compare/v7.1.0...v7.1.1) (2020-11-22)
 
