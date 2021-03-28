@@ -1,3 +1,14 @@
+<a name="8.0.0"></a>
+# [8.0.0](https://github.com/deckgo/demo/compare/v7.1.2...v8.0.0) (2021-03-28)
+
+### Features
+
+- display presentation in a 16/9 container if windowed and not `papyrus`
+
+### Refactor
+
+- fullscreen options container renamed from `navigation` to `fullscreen-menu`
+
 <a name="7.1.2"></a>
 # [7.1.2](https://github.com/deckgo/demo/compare/v7.1.1...v7.1.2) (2021-01-26)
 
