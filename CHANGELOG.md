@@ -1,3 +1,14 @@
+<a name="8.1.0"></a>
+# [8.1.0](https://github.com/deckgo/demo/compare/v8.0.0...v8.1.0) (2021-04-23)
+
+### Features
+
+- laser pointer on fullscreen presenting
+
+### Fix
+
+- fullscreen size and mouse inactivity
+
 <a name="8.0.0"></a>
 # [8.0.0](https://github.com/deckgo/demo/compare/v7.1.2...v8.0.0) (2021-03-28)
 
