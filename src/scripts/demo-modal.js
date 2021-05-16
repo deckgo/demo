@@ -1,7 +1,7 @@
 presentModal = async () => {
-    // create component to open
-    const element = document.createElement('div');
-    element.innerHTML = `
+  // create component to open
+  const element = document.createElement('div');
+  element.innerHTML = `
   <ion-header>
     <ion-toolbar color="tertiary">
       <ion-buttons slot="start">
@@ -23,22 +23,22 @@ presentModal = async () => {
   </ion-content>
   `;
 
-    const modal = document.createElement('ion-modal');
-    modal.component = element;
+  const modal = document.createElement('ion-modal');
+  modal.component = element;
 
-    document.body.appendChild(modal);
+  document.body.appendChild(modal);
 
-    // present the modal
-    await modal.present();
+  // present the modal
+  await modal.present();
 
-    // listen for close event
-    const buttonDismiss = document.querySelector('ion-modal ion-button#dismiss');
-    buttonDismiss.addEventListener('click', async () => {
-        await document.querySelector('ion-modal').dismiss();
-    });
+  // listen for close event
+  const buttonDismiss = document.querySelector('ion-modal ion-button#dismiss');
+  buttonDismiss.addEventListener('click', async () => {
+    await document.querySelector('ion-modal').dismiss();
+  });
 
-    const buttonClose = document.querySelector('ion-modal ion-button#close');
-    buttonClose.addEventListener('click', async () => {
-        await document.querySelector('ion-modal').dismiss();
-    });
+  const buttonClose = document.querySelector('ion-modal ion-button#close');
+  buttonClose.addEventListener('click', async () => {
+    await document.querySelector('ion-modal').dismiss();
+  });
 };

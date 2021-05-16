@@ -23,6 +23,9 @@
     "deckdeckgo-webpack-plugins": "^2.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
+    "prettier": "^2.3.0",
+    "prettier-quick": "0.0.5",
     "progress-bar-webpack-plugin": "^2.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.0",
@@ -71,5 +74,10 @@
     "slides",
     "slideshow",
     "talk"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }
