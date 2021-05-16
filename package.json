@@ -5,6 +5,7 @@
   "homepage": "https://deckdeckgo.com",
   "scripts": {
     "start": "webpack serve",
+    "esbuild": "rimraf dist && node ./esbuild.js",
     "build": "webpack --mode production"
   },
   "author": {
@@ -21,7 +22,9 @@
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
     "deckdeckgo-webpack-plugins": "^2.0.0",
+    "esbuild": "^0.11.22",
     "file-loader": "^6.2.0",
+    "html-minifier-terser": "^5.1.1",
     "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
     "prettier": "^2.3.0",
