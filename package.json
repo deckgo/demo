@@ -18,6 +18,7 @@
     "url": "git://github.com/deckgo/demo.git"
   },
   "devDependencies": {
+    "@stencil/core": "^2.6.0",
     "husky": "^6.0.0",
     "prettier": "^2.3.0",
     "prettier-quick": "0.0.5",
