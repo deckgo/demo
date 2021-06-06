@@ -4,8 +4,9 @@
   "description": "The Progressive Web App alternative for simple presentations",
   "homepage": "https://deckdeckgo.com",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "author": {
     "name": "David Dal Busco",
@@ -17,21 +18,12 @@
     "url": "git://github.com/deckgo/demo.git"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^9.0.0",
-    "css-loader": "^5.2.6",
-    "deckdeckgo-webpack-plugins": "^2.0.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.1",
+    "@stencil/core": "^2.6.0",
     "husky": "^6.0.0",
     "prettier": "^2.3.0",
     "prettier-quick": "0.0.5",
-    "progress-bar-webpack-plugin": "^2.1.0",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2",
-    "workbox-webpack-plugin": "^6.1.5"
+    "vite": "^2.3.6",
+    "vite-plugin-pwa": "^0.7.3"
   },
   "license": "MIT",
   "dependencies": {
@@ -59,8 +51,7 @@
     "@deckdeckgo/social": "^4.1.0",
     "@deckdeckgo/utils": "^2.0.1",
     "@deckdeckgo/youtube": "^2.1.0",
-    "@ionic/core": "^5.6.8",
-    "web-social-share": "^7.1.0"
+    "web-social-share": "^7.2.0"
   },
   "keywords": [
     "ionic",

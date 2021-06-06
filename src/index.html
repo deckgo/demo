@@ -84,26 +84,6 @@
       media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)"
     />
 
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', async () => {
-          try {
-            const reg = await navigator.serviceWorker.register('service-worker.js');
-            reg.onupdatefound = () => {
-              const installingWorker = reg.installing;
-              installingWorker.onstatechange = () => {
-                if (installingWorker.state === 'installed') {
-                  window.dispatchEvent(new Event('swUpdate'));
-                }
-              };
-            };
-          } catch (e) {
-            console.warn('No service worker registered');
-          }
-        });
-      }
-    </script>
-
     <link rel="manifest" href="manifest.json" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,6 +108,10 @@
         display: none;
       }
     </style>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
   </head>
   <body>
     <ion-app class="loading">
@@ -355,7 +339,7 @@
                   <deckgo-reveal style="width: auto"
                     ><span>A</span><span style="margin-left: 8px; margin-right: 8px">journey</span
                     ><span style="margin-right: 8px">miles thousand a of</span
-                    ><span style="color: var(--ion-color-warning)" style="margin-right: 8px"
+                    ><span style="color: var(--ion-color-warning); margin-right: 8px;"
                       ><strong>step single a with begins</strong> - </span
                     ><span>Laozi</span></deckgo-reveal
                   >
@@ -443,6 +427,7 @@
       </web-social-share>
     </ion-app>
 
+    <script type="module" src="/index.js"></script>
     <noscript> Please enable Javascript to access this presentation. </noscript>
   </body>
 </html>
