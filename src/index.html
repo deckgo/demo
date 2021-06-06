@@ -320,17 +320,30 @@
                 <h3 slot="title">Or the template for charts</h3>
               </deckgo-slide-chart>
 
-              <deckgo-slide-code
-                src="https://demo.deckdeckgo.com/assets/code/deckdeckgo-slide-code-example.txt"
-                style="
+              <deckgo-slide-title
+                      style="
                   --code-margin-bottom: 6rem;
                   --background: var(--ion-color-dark);
                   --color: var(--ion-color-light);
                   --code-color: var(--ion-color-light);
                 "
               >
-                <h2 slot="title">Showcase your code</h2>
-              </deckgo-slide-code>
+                <h2 slot="title" style="margin-top: 0">Showcase your code</h2>
+                <deckgo-highlight-code highlight-lines="2-5 9" line-numbers="true" slot="content" style="--deckgo-highlight-code-carbon-toolbar-display: none;">
+                  <code slot="code">export class MyComponent {
+
+  private handleClick = () => {
+    alert('Received the button click!');
+  }
+
+  render() {
+    return (
+      <button onclick="{this.handleClick}">Click Me!</button>
+    );
+  }
+}</code>
+                </deckgo-highlight-code>
+              </deckgo-slide-title>
 
               <deckgo-slide-playground src="https://codepen.io/peterpeterparker/pen/dyGbOZm">
                 <h2 slot="title">Or your best playgrounds</h2>

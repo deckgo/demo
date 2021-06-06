@@ -1,3 +1,44 @@
+<a name="8.3.2"></a>
+
+# [8.3.2](https://github.com/deckgo/demo/compare/v8.3.1...v8.3.2) (2021-05-29)
+
+### Build
+
+- bump dependencies
+
+<a name="8.3.1"></a>
+
+# [8.3.1](https://github.com/deckgo/demo/compare/v8.3.0...v8.3.1) (2021-05-27)
+
+### Fix
+
+- no reveal / animation of `@deckgo/highlight-code` if no lines to highlight 
+
+<a name="8.3.0"></a>
+
+# [8.3.0](https://github.com/deckgo/demo/compare/v8.2.0...v8.3.0) (2021-05-21)
+
+### Features
+
+- replace deprecated template code with code highlight
+
+### Fix
+
+- local webpack `development` cmd
+- no minification to support code blocks
+
+### Build
+
+- update dependencies
+
+<a name="8.2.0"></a>
+
+# [8.2.0](https://github.com/deckgo/demo/compare/v8.1.0...v8.2.0) (2021-05-16)
+
+### Build
+
+- bump dependencies including DeckDeckGo "`esm` libraries"
+
 <a name="8.1.0"></a>
 
 # [8.1.0](https://github.com/deckgo/demo/compare/v8.0.0...v8.1.0) (2021-04-23)

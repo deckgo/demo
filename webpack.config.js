@@ -40,7 +40,8 @@ const plugins = [
     inject: true,
     template: './src/index.html',
     path: path.join(__dirname, '../dist/'),
-    filename: 'index.html'
+    filename: 'index.html',
+    minify: false
   }),
   new CopyWebpackPlugin({
     patterns: [
