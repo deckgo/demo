@@ -5,6 +5,7 @@
 ### Build
 
 - bump dependencies
+- CI without artifacts
 
 <a name="8.3.2"></a>
 
